@@ -1,6 +1,52 @@
 @charset "UTF-8";
 
-figure video{
+.play-select-area{
+    margin: 20px 0px 20px 0px;
+}
+
+.scores{
+    display: none;
+}
+
+.scores.onShow{
+    display: block;
+}
+
+figure video {
+    width: 100%;
+    height: auto;
+}
+
+.figure {
+    width: 100%;
+    height: auto;
+}
+
+figure iframe {
+    width: 100%;
+    height: auto;
+}
+
+.vd_score {
+    overflow: hidden;
+    /* width: 100%; */
+    /* height: auto */
+}
+
+/* 16:9 비율인 경우 56.25%, 4:3 비율인 경우 75%로 설정 */
+.video-frame {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+}
+
+.video-frame embed,
+.video-frame iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
+    border: 0;
 }
