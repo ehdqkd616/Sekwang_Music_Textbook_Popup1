@@ -12,6 +12,23 @@
     display: block;
 }
 
+.btn-play {
+    display: none;
+}
+
+.btn-play.onShow {
+    display: inline-block;
+}
+
+.section-btn-area{
+    display: none;
+}
+
+.section-btn-area.onShow{
+    display: block;
+}
+
+
 figure video {
     width: 100%;
     height: auto;
@@ -50,3 +67,4 @@ figure iframe {
     height: 100%;
     border: 0;
 }
+

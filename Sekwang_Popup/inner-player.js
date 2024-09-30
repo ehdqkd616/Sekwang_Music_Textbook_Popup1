@@ -1,37 +1,236 @@
-Frame.buttonLoading = function () {
+// URL 객체 관리
+const url =  window.location.href;
+const urlObject =  new URL(url);
+const urlParams = urlObject.searchParams;
+// const videoUrl = urlParams.get('videoUrl');
+// const videoArUrl = urlParams.get('videoArUrl');
+// const videoMrUrl = urlParams.get('videoMrUrl');
+// const videoArFirstUrl = urlParams.get('videoUrl');
+// const videoArSecondUrl = urlParams.get('videoUrl');
+// const playType = urlParams.get('playType');
 
-    $(document).on("click", ".frame1 button[name='test1']", function () {
-        $("#score").get(0).currentTime = 10;
-        $("#score").attr("autoplay", "true");
-        console.log("클릭됨");
-        // $("#score").get(0).pause();
-        // $("#score").attr("autoplay", "true");
-    });
+const videoUrl = 'video/14쪽_즐거운봄_ar.mp4';
+const videoArUrl = 'video/14쪽_즐거운봄_ar.mp4';
+const videoMrUrl = 'video/14쪽_즐거운봄_mr.mp4';
+const videoArFirstUrl = 'video/14쪽_즐거운봄_ar.mp4';
+const videoArSecondUrl = 'video/14쪽_즐거운봄_ar.mp4';
+const playType = 'solo';
+// const playType = 'duet';
 
-    $(document).on("click", ".frame1 button[name='test2']", function () {
-        $("#score").get(0).currentTime = 20;
-        $("#score").attr("autoplay", "true");
-        console.log("클릭됨");
-    });
 
-    $(document).on("click", ".frame1 button[name='test3']", function () {
-        $("#score").get(0).currentTime = 30;
-        $("#score").attr("autoplay", "true");
-        console.log("클릭됨");
-    });
+const sectionTime = [10, 20, 30, 40, 50, 60];
+const sectionCnt = sectionTime.length;
 
-    $(document).on("click", ".frame1 button[name='test4']", function () {
-        $("#score").get(0).currentTime = 40;
-        $("#score").attr("autoplay", "true");
-        console.log("클릭됨");
-    });
+$(document).ready(function(){
+    // 페이지 최초 로딩
+    Frame.pageLoading();
 
-    $(document).on("click", ".frame1 button[name='test5']", function () {
-        $("#score").get(0).currentTime = 50;
-        $("#score").attr("autoplay", "true");
-        console.log("클릭됨");
-    });
+
+    
+    console.log(`urlObject : ${urlObject}`);
+    console.log(`urlParams : ${urlParams}`);
+    console.log(`videoUrl : ${videoUrl}`);
+    console.log(`playType : ${playType}`);
+});
+
+// 페이지 로딩 후 이루어질 이벤트 등록
+Frame.pageLoading = function () {
+
+    // 구간 데이터 로딩
+    Frame.sectionDataLoading();
+    Frame.videoLoading();
+    
 }
+
+// 페이지 로딩 후 이루어질 이벤트 등록
+Frame.videoLoading = function () {
+
+    // 비디오 데이터 로딩
+    $("#score-ar").attr("src", videoArUrl);
+    $("#score-mr").attr("src", videoMrUrl);
+    $("#score-ar-first").attr("src", videoArFirstUrl);
+    $("#score-ar-second").attr("src", videoArSecondUrl);
+    
+}
+
+// 구간별 시간 배열 등록
+Frame.sectionDataLoading = function () {
+
+    // if( playType == "solo" ) {
+    //     // 버튼 생성 이벤트
+    // } else if ( playType == "duet" ) {
+    //     // 버튼 생성 이벤트
+    // }
+
+    // let sectionTime = [10, 20, 30, 40, 50, 60];
+    // let sectionCnt = sectionTime.length;
+
+    console.log(`sectionTime: ${sectionTime}`);
+    console.log(`sectionCnt: ${sectionCnt}`);
+
+    // 구간 버튼 생성
+    Frame.sectionBtnCreate();
+
+    // 플레이 방식 버튼 이벤트 등록
+    Frame.playMethodBtnEventRegister();
+}
+
+Frame.playMethodBtnEventRegister = function () {
+
+    $(document).on("click", ".btn-play-ar", function () {
+
+        $("#score-ar").attr("src", videoArUrl);
+
+        $(".btn-play").addClass("btn-secondary");
+        $(".btn-play").removeClass("btn-primary");
+        $(this).addClass("btn-primary");
+        $(this).removeClass("btn-secondary");
+
+        $(".scores").removeClass("onShow");
+        $(".scores_0").addClass("onShow");
+
+        // $("#score").get(0).pause();
+
+        $('.vd_score').each(function(){
+            $(this).get(0).pause()
+        });
+
+        // console.log("play-mr");
+    });
+
+    $(document).on("click", ".btn-play-mr", function () {
+
+        $("#score-mr").attr("src", videoMrUrl);
+
+        $(".btn-play").addClass("btn-secondary");
+        $(".btn-play").removeClass("btn-primary");
+        $(this).addClass("btn-primary");
+        $(this).removeClass("btn-secondary");
+
+        $(".scores").removeClass("onShow");
+        $(".scores_1").addClass("onShow");
+
+        // $("#score").get(0).pause();
+
+        $('.vd_score').each(function(){
+            $(this).get(0).pause()
+        });
+
+        // console.log("play-mr");
+    });
+
+    $(document).on("click", ".btn-play-ar-first", function () {
+
+        $("#score-mr").attr("src", videoArFirstUrl);
+
+        $(".btn-play").addClass("btn-secondary");
+        $(".btn-play").removeClass("btn-primary");
+        $(this).addClass("btn-primary");
+        $(this).removeClass("btn-secondary");
+
+        $(".scores").removeClass("onShow");
+        $(".scores_2").addClass("onShow");
+
+        // $("#score").get(0).pause();
+
+        $('.vd_score').each(function(){
+            $(this).get(0).pause()
+        });
+
+        // console.log("play-mr");
+    });
+
+    $(document).on("click", ".btn-play-ar-second", function () {
+
+        $("#score-mr").attr("src", "video/14쪽_즐거운봄_mr.mp4");
+
+        $(".btn-play").addClass("btn-secondary");
+        $(".btn-play").removeClass("btn-primary");
+        $(this).addClass("btn-primary");
+        $(this).removeClass("btn-secondary");
+
+        $(".scores").removeClass("onShow");
+        $(".scores_3").addClass("onShow");
+
+        // $("#score").get(0).pause();
+
+        $('.vd_score').each(function(){
+            $(this).get(0).pause()
+        });
+
+        // console.log("play-mr");
+    });
+
+}
+
+// 구간 버튼 생성
+Frame.sectionBtnCreate = function () {
+    let sectionArBtnArea = $("#section-btn-ar");
+    let sectionMrBtnArea = $("#section-btn-mr");
+    let sectionArFirstBtnArea = $("#section-btn-ar-first");
+    let sectionArSecondBtnArea = $("#section-btn-ar-second");
+
+    let htmlText = '';
+
+    sectionArBtnArea.empty();
+    for (let i = 0; i<sectionCnt; i++) {
+        htmlText += `<button name="section${i+1}" class="btn btn-secondary section-btn">${i+1}</button>\n` 
+    }
+
+    sectionArBtnArea.append(htmlText);
+    sectionMrBtnArea.append(htmlText);
+    sectionArFirstBtnArea.append(htmlText);
+    sectionArSecondBtnArea.append(htmlText);
+
+    Frame.sectionBtnEventRegister();
+}
+
+// 구간 버튼 이벤트 등록
+Frame.sectionBtnEventRegister = function () {
+
+    for (let i = 0; i<sectionCnt; i++) {
+        $(document).on("click", `#section-btn-ar button[name='section${i+1}']`, function () {
+            $("#score-ar").get(0).currentTime = sectionTime[i];
+            $("#score-ar").attr("autoplay", "true");
+            $(".section-btn").addClass("btn-secondary");
+            $(".section-btn").removeClass("btn-primary");
+            $(this).addClass("btn-primary");
+            $(this).removeClass("btn-secondary");
+            console.log("클릭됨");
+        });
+
+        $(document).on("click", `#section-btn-mr button[name='section${i+1}']`, function () {
+            $("#score-mr").get(0).currentTime = sectionTime[i];
+            $("#score-mr").attr("autoplay", "true");
+            $(".section-btn").addClass("btn-secondary");
+            $(".section-btn").removeClass("btn-primary");
+            $(this).addClass("btn-primary");
+            $(this).removeClass("btn-secondary");
+            console.log("클릭됨");
+        });
+
+        $(document).on("click", `#section-btn-ar-first button[name='section${i+1}']`, function () {
+            $("#score-ar-first").get(0).currentTime = sectionTime[i];
+            $("#score-ar-first").attr("autoplay", "true");
+            $(".section-btn").addClass("btn-secondary");
+            $(".section-btn").removeClass("btn-primary");
+            $(this).addClass("btn-primary");
+            $(this).removeClass("btn-secondary");
+            console.log("클릭됨");
+        });
+
+        $(document).on("click", `#section-btn-ar-second button[name='section${i+1}']`, function () {
+            $("#score-ar-second").get(0).currentTime = sectionTime[i];
+            $("#score-ar-second").attr("autoplay", "true");
+            $(".section-btn").addClass("btn-secondary");
+            $(".section-btn").removeClass("btn-primary");
+            $(this).addClass("btn-primary");
+            $(this).removeClass("btn-secondary");
+            console.log("클릭됨");
+        });
+    }
+}
+
 
 $(document).ready(function () {
 
@@ -73,41 +272,6 @@ $(document).ready(function () {
         // });
 
         console.log("play-ar");
-    });
-
-
-
-
-    $(document).on("click", ".frame1 button[name='test1']", function () {
-        $(".vd_score").get(0).currentTime = 10;
-        $(".vd_score").attr("autoplay", "true");
-        console.log("클릭됨");
-        // $("#score").get(0).pause();
-        // $("#score").attr("autoplay", "true");
-    });
-
-    $(document).on("click", ".frame1 button[name='test2']", function () {
-        $("#score").get(0).currentTime = 20;
-        $("#score").attr("autoplay", "true");
-        console.log("클릭됨");
-    });
-
-    $(document).on("click", ".frame1 button[name='test3']", function () {
-        $("#score").get(0).currentTime = 30;
-        $("#score").attr("autoplay", "true");
-        console.log("클릭됨");
-    });
-
-    $(document).on("click", ".frame1 button[name='test4']", function () {
-        $("#score").get(0).currentTime = 40;
-        $("#score").attr("autoplay", "true");
-        console.log("클릭됨");
-    });
-
-    $(document).on("click", ".frame1 button[name='test5']", function () {
-        $("#score").get(0).currentTime = 50;
-        $("#score").attr("autoplay", "true");
-        console.log("클릭됨");
     });
 
 });

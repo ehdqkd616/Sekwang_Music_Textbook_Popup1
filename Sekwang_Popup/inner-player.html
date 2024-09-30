@@ -17,40 +17,41 @@
     <div id="frame" class="container text-center">
 
         <div class="row align-items-center play-select-area">
-            <div class="col">
-                <button name="play-mr" class="btn btn-primary">반주 듣기</button>
-                <button name="play-ar" class="btn btn-secondary">노래 듣기</button>
+
+            <div class="col play-select">
+                <button name="play-ar" class="btn btn-primary btn-play btn-play-ar onShow">노래 듣기</button>
+                <button name="play-mr" class="btn btn-secondary btn-play btn-play-mr onShow">반주 듣기</button>
+                <button name="play-ar-first" class="btn btn-secondary btn-play btn-play-ar-first">1성부 듣기</button>
+                <button name="play-ar-second" class="btn btn-secondary btn-play btn-play-ar-second">2성부 듣기</button>
             </div>
+
+            <div id="section-btn-ar" class="col section-btn-area section-btn-ar onShow"></div>
+
+            <div id="section-btn-mr" class="col section-btn-area section-btn-mr"></div>
+
+            <div id="section-btn-ar-first" class="col section-btn-area section-btn-ar-first"></div>
+
+            <div id="section-btn-ar-second" class="col section-btn-area section-btn-ar-second"></div>
+
         </div>
 
         <figure class="figure">
             <div class="score">
                 <div class="scores scores_0 onShow">
-                    <video class="vd_score" id="score" src="video/14쪽_즐거운봄_mr.mp4" preload="auto" controls></video>
+                    <video class="vd_score" id="score-ar" src="" preload="auto" controls></video>
                 </div>
-                <!-- <div class="scores scores_1">
-                    <video class="vd_score" id="score" src="video/14쪽_즐거운봄_ar.mp4" preload="auto" controls></video>
-                </div> -->
+                <div class="scores scores_1">
+                    <video class="vd_score" id="score-mr" src="" preload="auto" controls></video>
+                </div>
+                <div class="scores scores_2">
+                    <video class="vd_score" id="score-ar-first" src="" preload="auto" controls></video>
+                </div>
+                <div class="scores scores_3">
+                    <video class="vd_score" id="score-ar-second" src="" preload="auto" controls></video>
+                </div>
             </div>
         </figure>
 
-        <div class="row align-items-center frame1">
-            <div class="col">
-                <button name="test1" class="btn btn-primary time-btn">10초</button>
-            </div>
-            <div class="col">
-                <button name="test2" class="btn btn-primary time-btn">20초</button>
-            </div>
-            <div class="col">
-                <button name="test3" class="btn btn-primary time-btn">30초</button>
-            </div>
-            <div class="col">
-                <button name="test4" class="btn btn-primary time-btn">40초</button>
-            </div>
-            <div class="col">
-                <button name="test5" class="btn btn-primary time-btn">50초</button>
-            </div>
-        </div>
     </div>
 </body>
 
