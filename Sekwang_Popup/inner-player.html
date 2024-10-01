@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script type="text/javascript" src="maintenance/videoList.json"></script>
     <script type="text/javascript" src="jquery-3.5.1.min.js"></script>
     <script type="text/javascript" src="bootstrap.min.js"></script>
     <script type="text/javascript" src="popup.js"></script>
@@ -25,29 +26,14 @@
                 <button name="play-ar-second" class="btn btn-secondary btn-play btn-play-ar-second">2성부 듣기</button>
             </div>
 
-            <div id="section-btn-ar" class="col section-btn-area section-btn-ar onShow"></div>
-
-            <div id="section-btn-mr" class="col section-btn-area section-btn-mr"></div>
-
-            <div id="section-btn-ar-first" class="col section-btn-area section-btn-ar-first"></div>
-
-            <div id="section-btn-ar-second" class="col section-btn-area section-btn-ar-second"></div>
+            <div id="section-btn-area" class="col section-btn-area onShow"></div>
 
         </div>
 
         <figure class="figure">
             <div class="score">
-                <div class="scores scores_0 onShow">
-                    <video class="vd_score" id="score-ar" src="" preload="auto" controls></video>
-                </div>
-                <div class="scores scores_1">
-                    <video class="vd_score" id="score-mr" src="" preload="auto" controls></video>
-                </div>
-                <div class="scores scores_2">
-                    <video class="vd_score" id="score-ar-first" src="" preload="auto" controls></video>
-                </div>
-                <div class="scores scores_3">
-                    <video class="vd_score" id="score-ar-second" src="" preload="auto" controls></video>
+                <div class="scores onShow">
+                    <video class="vd_score" id="vd_score" src="" preload="auto" controls></video>
                 </div>
             </div>
         </figure>

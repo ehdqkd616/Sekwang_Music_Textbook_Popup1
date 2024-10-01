@@ -2,54 +2,59 @@
 const url =  window.location.href;
 const urlObject =  new URL(url);
 const urlParams = urlObject.searchParams;
+
+// 설정 파일 불러오기
 // const videoUrl = urlParams.get('videoUrl');
-// const videoArUrl = urlParams.get('videoArUrl');
-// const videoMrUrl = urlParams.get('videoMrUrl');
-// const videoArFirstUrl = urlParams.get('videoUrl');
-// const videoArSecondUrl = urlParams.get('videoUrl');
-// const playType = urlParams.get('playType');
+const videoUrl = "QR1_0-1";
+// const videoInfo = JSON.parse(JSON.stringify(videoList));
+const videoAllList = JSON.parse(JSON.stringify(videoList));
+const videoInfo = videoAllList[videoUrl];
+// console.log(`videoInfo: ${videoInfo}`);
+// console.log(videoInfo);
 
-const videoUrl = 'video/14쪽_즐거운봄_ar.mp4';
-const videoArUrl = 'video/14쪽_즐거운봄_ar.mp4';
-const videoMrUrl = 'video/14쪽_즐거운봄_mr.mp4';
-const videoArFirstUrl = 'video/14쪽_즐거운봄_ar.mp4';
-const videoArSecondUrl = 'video/14쪽_즐거운봄_ar.mp4';
-const playType = 'solo';
-// const playType = 'duet';
-
-
-const sectionTime = [10, 20, 30, 40, 50, 60];
+const sectionTime = videoInfo["sectionTime"];
 const sectionCnt = sectionTime.length;
 
+console.log(`urlParams : ${urlParams}`);
+console.log(`videoUrl : ${videoUrl}`);
+console.log(`videoInfo : ${videoInfo.videoArUrl}`);
+console.log(`sectionTime: ${sectionTime}`);
+console.log(`sectionCnt: ${sectionCnt}`);
+
 $(document).ready(function(){
+
     // 페이지 최초 로딩
     Frame.pageLoading();
-
-
     
-    console.log(`urlObject : ${urlObject}`);
-    console.log(`urlParams : ${urlParams}`);
-    console.log(`videoUrl : ${videoUrl}`);
-    console.log(`playType : ${playType}`);
+
+
+ 
 });
 
 // 페이지 로딩 후 이루어질 이벤트 등록
 Frame.pageLoading = function () {
 
+    console.log("Frame.pageLoading");
+
+    // 비디오 세팅
+    Frame.videoLoading(videoInfo.videoArUrl);
+
     // 구간 데이터 로딩
     Frame.sectionDataLoading();
-    Frame.videoLoading();
     
 }
 
 // 페이지 로딩 후 이루어질 이벤트 등록
-Frame.videoLoading = function () {
+Frame.videoLoading = function ( url ) {
 
     // 비디오 데이터 로딩
-    $("#score-ar").attr("src", videoArUrl);
-    $("#score-mr").attr("src", videoMrUrl);
-    $("#score-ar-first").attr("src", videoArFirstUrl);
-    $("#score-ar-second").attr("src", videoArSecondUrl);
+    $("#vd_score").attr("src", url);
+    $("#vd_score").get(0).pause();
+
+    // $("#score-ar").attr("src", videoArUrl);
+    // $("#score-mr").attr("src", videoMrUrl);
+    // $("#score-ar-first").attr("src", videoArFirstUrl);
+    // $("#score-ar-second").attr("src", videoArSecondUrl);
     
 }
 
@@ -62,12 +67,6 @@ Frame.sectionDataLoading = function () {
     //     // 버튼 생성 이벤트
     // }
 
-    // let sectionTime = [10, 20, 30, 40, 50, 60];
-    // let sectionCnt = sectionTime.length;
-
-    console.log(`sectionTime: ${sectionTime}`);
-    console.log(`sectionCnt: ${sectionCnt}`);
-
     // 구간 버튼 생성
     Frame.sectionBtnCreate();
 
@@ -75,113 +74,78 @@ Frame.sectionDataLoading = function () {
     Frame.playMethodBtnEventRegister();
 }
 
+// 플레이 방식 버튼 이벤트 등록
 Frame.playMethodBtnEventRegister = function () {
 
     $(document).on("click", ".btn-play-ar", function () {
 
-        $("#score-ar").attr("src", videoArUrl);
+        Frame.videoLoading( videoInfo.videoArUrl );
 
         $(".btn-play").addClass("btn-secondary");
         $(".btn-play").removeClass("btn-primary");
         $(this).addClass("btn-primary");
         $(this).removeClass("btn-secondary");
 
-        $(".scores").removeClass("onShow");
-        $(".scores_0").addClass("onShow");
+        $("#score").get(0).pause();
+        console.log("play-ar");
 
-        // $("#score").get(0).pause();
-
-        $('.vd_score').each(function(){
-            $(this).get(0).pause()
-        });
-
-        // console.log("play-mr");
     });
 
     $(document).on("click", ".btn-play-mr", function () {
 
-        $("#score-mr").attr("src", videoMrUrl);
+        Frame.videoLoading( videoInfo.videoMrUrl );
 
         $(".btn-play").addClass("btn-secondary");
         $(".btn-play").removeClass("btn-primary");
         $(this).addClass("btn-primary");
         $(this).removeClass("btn-secondary");
 
-        $(".scores").removeClass("onShow");
-        $(".scores_1").addClass("onShow");
+        console.log("play-mr");
 
-        // $("#score").get(0).pause();
-
-        $('.vd_score').each(function(){
-            $(this).get(0).pause()
-        });
-
-        // console.log("play-mr");
     });
 
     $(document).on("click", ".btn-play-ar-first", function () {
 
-        $("#score-mr").attr("src", videoArFirstUrl);
+        Frame.videoLoading( videoInfo.videoArFirstUrl );
 
         $(".btn-play").addClass("btn-secondary");
         $(".btn-play").removeClass("btn-primary");
         $(this).addClass("btn-primary");
         $(this).removeClass("btn-secondary");
 
-        $(".scores").removeClass("onShow");
-        $(".scores_2").addClass("onShow");
+        console.log("play-ar-first");
 
-        // $("#score").get(0).pause();
-
-        $('.vd_score').each(function(){
-            $(this).get(0).pause()
-        });
-
-        // console.log("play-mr");
     });
 
     $(document).on("click", ".btn-play-ar-second", function () {
 
-        $("#score-mr").attr("src", "video/14쪽_즐거운봄_mr.mp4");
+        Frame.videoLoading( videoInfo.videoArSecondUrl );
 
         $(".btn-play").addClass("btn-secondary");
         $(".btn-play").removeClass("btn-primary");
         $(this).addClass("btn-primary");
         $(this).removeClass("btn-secondary");
 
-        $(".scores").removeClass("onShow");
-        $(".scores_3").addClass("onShow");
+        console.log("play-ar-second");
 
-        // $("#score").get(0).pause();
-
-        $('.vd_score').each(function(){
-            $(this).get(0).pause()
-        });
-
-        // console.log("play-mr");
     });
 
 }
 
 // 구간 버튼 생성
 Frame.sectionBtnCreate = function () {
-    let sectionArBtnArea = $("#section-btn-ar");
-    let sectionMrBtnArea = $("#section-btn-mr");
-    let sectionArFirstBtnArea = $("#section-btn-ar-first");
-    let sectionArSecondBtnArea = $("#section-btn-ar-second");
+    let sectionBtnArea = $("#section-btn-area");
 
     let htmlText = '';
 
-    sectionArBtnArea.empty();
+    sectionBtnArea.empty();
     for (let i = 0; i<sectionCnt; i++) {
         htmlText += `<button name="section${i+1}" class="btn btn-secondary section-btn">${i+1}</button>\n` 
     }
 
-    sectionArBtnArea.append(htmlText);
-    sectionMrBtnArea.append(htmlText);
-    sectionArFirstBtnArea.append(htmlText);
-    sectionArSecondBtnArea.append(htmlText);
+    sectionBtnArea.append(htmlText);
 
+    // 구간 버튼 이벤트 등록
     Frame.sectionBtnEventRegister();
 }
 
@@ -189,89 +153,15 @@ Frame.sectionBtnCreate = function () {
 Frame.sectionBtnEventRegister = function () {
 
     for (let i = 0; i<sectionCnt; i++) {
-        $(document).on("click", `#section-btn-ar button[name='section${i+1}']`, function () {
-            $("#score-ar").get(0).currentTime = sectionTime[i];
-            $("#score-ar").attr("autoplay", "true");
+        $(document).on("click", `#section-btn-area button[name='section${i+1}']`, function () {
+            $("#vd_score").get(0).currentTime = sectionTime[i];
+            $("#vd_score").attr("autoplay", "true");
+            $("#vd_score").get(0).play();
             $(".section-btn").addClass("btn-secondary");
             $(".section-btn").removeClass("btn-primary");
             $(this).addClass("btn-primary");
             $(this).removeClass("btn-secondary");
-            console.log("클릭됨");
         });
 
-        $(document).on("click", `#section-btn-mr button[name='section${i+1}']`, function () {
-            $("#score-mr").get(0).currentTime = sectionTime[i];
-            $("#score-mr").attr("autoplay", "true");
-            $(".section-btn").addClass("btn-secondary");
-            $(".section-btn").removeClass("btn-primary");
-            $(this).addClass("btn-primary");
-            $(this).removeClass("btn-secondary");
-            console.log("클릭됨");
-        });
-
-        $(document).on("click", `#section-btn-ar-first button[name='section${i+1}']`, function () {
-            $("#score-ar-first").get(0).currentTime = sectionTime[i];
-            $("#score-ar-first").attr("autoplay", "true");
-            $(".section-btn").addClass("btn-secondary");
-            $(".section-btn").removeClass("btn-primary");
-            $(this).addClass("btn-primary");
-            $(this).removeClass("btn-secondary");
-            console.log("클릭됨");
-        });
-
-        $(document).on("click", `#section-btn-ar-second button[name='section${i+1}']`, function () {
-            $("#score-ar-second").get(0).currentTime = sectionTime[i];
-            $("#score-ar-second").attr("autoplay", "true");
-            $(".section-btn").addClass("btn-secondary");
-            $(".section-btn").removeClass("btn-primary");
-            $(this).addClass("btn-primary");
-            $(this).removeClass("btn-secondary");
-            console.log("클릭됨");
-        });
     }
 }
-
-
-$(document).ready(function () {
-
-    Frame.buttonLoading();
-
-    $(document).on("click", ".play-select-area button[name='play-mr']", function () {
-
-        $("#score").attr("src", "video/14쪽_즐거운봄_mr.mp4");
-
-        $(this).addClass("btn-primary");
-        $(this).removeClass("btn-secondary");
-        $("button[name='play-ar']").addClass("btn-secondary");
-        $("button[name='play-ar']").removeClass("btn-primary");
-        // $(".scores_0").addClass("onShow");
-        // $(".scores_1").removeClass("onShow");
-
-        $("#score").get(0).pause();
-
-        // $('.vd_score').each(function(){
-        //     $(this).get(0).pause()
-        // });
-
-        console.log("play-mr");
-    });
-
-    $(document).on("click", ".play-select-area button[name='play-ar']", function () {
-        $("#score").attr("src", "video/14쪽_즐거운봄_ar.mp4");
-        $(this).addClass("btn-primary");
-        $(this).removeClass("btn-secondary");
-        $("button[name='play-mr']").addClass("btn-secondary");
-        $("button[name='play-mr']").removeClass("btn-primary");
-        // $(".scores_1").addClass("onShow");
-        // $(".scores_0").removeClass("onShow");
-
-        $("#score").get(0).pause();
-
-        // $('.vd_score').each(function () {
-        //     $(this).get(0).pause()
-        // });
-
-        console.log("play-ar");
-    });
-
-});

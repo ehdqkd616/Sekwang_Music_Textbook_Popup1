@@ -1,0 +1,160 @@
+videoList = {
+    "QR1_0-1":
+    {
+        "videoArUrl" : "video/중1_QR0/중1_QR1_0-1_음악의기초1-2_ar.mp4",
+        "videoMrUrl" : "video/중1_QR0/중1_QR1_0-1_음악의기초1-2_mr.mp4",
+        "playType" : "solo",
+        "sectionTime" : [10, 20, 30, 40, 50, 60]
+    },
+    "QR1_0-2":
+    {
+        "videoArUrl" : "video/중1_QR0/중1_QR1_0-2_음악의기초 (그래그래서)_ar.mp4",
+        "videoMrUrl" : "video/중1_QR0/중1_QR1_0-2_음악의기초 (그래그래서)_mr.mp4",
+        "playType" : "solo",
+        "sectionTime" : [10, 20, 30, 40, 50, 60]
+    },
+    "QR1_0-1":
+    {
+        "videoArUrl" : "video/중1_QR0/중1_QR1_0-1_음악의기초1-2_ar.mp4",
+        "videoMrUrl" : "video/중1_QR0/중1_QR1_0-1_음악의기초1-2_mr.mp4",
+        "videoArFirstUrl" : "video/중1_QR0/중1_QR1_0-3_우오이에아1_ar",
+        "videoArSecondUrl" : "video/중1_QR0/중1_QR1_0-3_우오이에아1_mr",
+        "playType" : "solo",
+        "sectionTime" : [10, 20, 30, 40, 50, 60]
+    },
+    "QR1_0-1":
+    {
+        "videoArUrl" : "video/중1_QR0/중1_QR1_0-1_음악의기초1-2_ar.mp4",
+        "videoMrUrl" : "video/중1_QR0/중1_QR1_0-1_음악의기초1-2_mr.mp4",
+        "videoArFirstUrl" : "video/중1_QR0/중1_QR1_0-3_우오이에아1_ar",
+        "videoArSecondUrl" : "video/중1_QR0/중1_QR1_0-3_우오이에아1_mr",
+        "playType" : "solo",
+        "sectionTime" : [10, 20, 30, 40, 50, 60]
+    },
+    "QR1_0-1":
+    {
+        "videoArUrl" : "video/중1_QR0/중1_QR1_0-1_음악의기초1-2_ar.mp4",
+        "videoMrUrl" : "video/중1_QR0/중1_QR1_0-1_음악의기초1-2_mr.mp4",
+        "videoArFirstUrl" : "video/중1_QR0/중1_QR1_0-3_우오이에아1_ar",
+        "videoArSecondUrl" : "video/중1_QR0/중1_QR1_0-3_우오이에아1_mr",
+        "playType" : "solo",
+        "sectionTime" : [10, 20, 30, 40, 50, 60]
+    },
+    "QR1_0-1":
+    {
+        "videoArUrl" : "video/중1_QR0/중1_QR1_0-1_음악의기초1-2_ar.mp4",
+        "videoMrUrl" : "video/중1_QR0/중1_QR1_0-1_음악의기초1-2_mr.mp4",
+        "videoArFirstUrl" : "video/중1_QR0/중1_QR1_0-3_우오이에아1_ar",
+        "videoArSecondUrl" : "video/중1_QR0/중1_QR1_0-3_우오이에아1_mr",
+        "playType" : "solo",
+        "sectionTime" : [10, 20, 30, 40, 50, 60]
+    },
+    "QR1_0-1":
+    {
+        "videoArUrl" : "video/중1_QR0/중1_QR1_0-1_음악의기초1-2_ar.mp4",
+        "videoMrUrl" : "video/중1_QR0/중1_QR1_0-1_음악의기초1-2_mr.mp4",
+        "videoArFirstUrl" : "video/중1_QR0/중1_QR1_0-3_우오이에아1_ar",
+        "videoArSecondUrl" : "video/중1_QR0/중1_QR1_0-3_우오이에아1_mr",
+        "playType" : "solo",
+        "sectionTime" : [10, 20, 30, 40, 50, 60]
+    },
+    "QR1_0-1":
+    {
+        "videoArUrl" : "video/중1_QR0/중1_QR1_0-1_음악의기초1-2_ar.mp4",
+        "videoMrUrl" : "video/중1_QR0/중1_QR1_0-1_음악의기초1-2_mr.mp4",
+        "videoArFirstUrl" : "video/중1_QR0/중1_QR1_0-3_우오이에아1_ar",
+        "videoArSecondUrl" : "video/중1_QR0/중1_QR1_0-3_우오이에아1_mr",
+        "playType" : "solo",
+        "sectionTime" : [10, 20, 30, 40, 50, 60]
+    },
+    "QR1_0-1":
+    {
+        "videoArUrl" : "video/중1_QR0/중1_QR1_0-1_음악의기초1-2_ar.mp4",
+        "videoMrUrl" : "video/중1_QR0/중1_QR1_0-1_음악의기초1-2_mr.mp4",
+        "videoArFirstUrl" : "video/중1_QR0/중1_QR1_0-3_우오이에아1_ar",
+        "videoArSecondUrl" : "video/중1_QR0/중1_QR1_0-3_우오이에아1_mr",
+        "playType" : "solo",
+        "sectionTime" : [10, 20, 30, 40, 50, 60]
+    },
+    "QR1_0-1":
+    {
+        "videoArUrl" : "video/중1_QR0/중1_QR1_0-1_음악의기초1-2_ar.mp4",
+        "videoMrUrl" : "video/중1_QR0/중1_QR1_0-1_음악의기초1-2_mr.mp4",
+        "videoArFirstUrl" : "video/중1_QR0/중1_QR1_0-3_우오이에아1_ar",
+        "videoArSecondUrl" : "video/중1_QR0/중1_QR1_0-3_우오이에아1_mr",
+        "playType" : "solo",
+        "sectionTime" : [10, 20, 30, 40, 50, 60]
+    },
+    "QR1_0-1":
+    {
+        "videoArUrl" : "video/중1_QR0/중1_QR1_0-1_음악의기초1-2_ar.mp4",
+        "videoMrUrl" : "video/중1_QR0/중1_QR1_0-1_음악의기초1-2_mr.mp4",
+        "videoArFirstUrl" : "video/중1_QR0/중1_QR1_0-3_우오이에아1_ar",
+        "videoArSecondUrl" : "video/중1_QR0/중1_QR1_0-3_우오이에아1_mr",
+        "playType" : "solo",
+        "sectionTime" : [10, 20, 30, 40, 50, 60]
+    },
+    "QR1_0-1":
+    {
+        "videoArUrl" : "video/중1_QR0/중1_QR1_0-1_음악의기초1-2_ar.mp4",
+        "videoMrUrl" : "video/중1_QR0/중1_QR1_0-1_음악의기초1-2_mr.mp4",
+        "videoArFirstUrl" : "video/중1_QR0/중1_QR1_0-3_우오이에아1_ar",
+        "videoArSecondUrl" : "video/중1_QR0/중1_QR1_0-3_우오이에아1_mr",
+        "playType" : "solo",
+        "sectionTime" : [10, 20, 30, 40, 50, 60]
+    },
+    "QR1_0-1":
+    {
+        "videoArUrl" : "video/중1_QR0/중1_QR1_0-1_음악의기초1-2_ar.mp4",
+        "videoMrUrl" : "video/중1_QR0/중1_QR1_0-1_음악의기초1-2_mr.mp4",
+        "videoArFirstUrl" : "video/중1_QR0/중1_QR1_0-3_우오이에아1_ar",
+        "videoArSecondUrl" : "video/중1_QR0/중1_QR1_0-3_우오이에아1_mr",
+        "playType" : "solo",
+        "sectionTime" : [10, 20, 30, 40, 50, 60]
+    },
+    "QR1_0-1":
+    {
+        "videoArUrl" : "video/중1_QR0/중1_QR1_0-1_음악의기초1-2_ar.mp4",
+        "videoMrUrl" : "video/중1_QR0/중1_QR1_0-1_음악의기초1-2_mr.mp4",
+        "videoArFirstUrl" : "video/중1_QR0/중1_QR1_0-3_우오이에아1_ar",
+        "videoArSecondUrl" : "video/중1_QR0/중1_QR1_0-3_우오이에아1_mr",
+        "playType" : "solo",
+        "sectionTime" : [10, 20, 30, 40, 50, 60]
+    },
+    "QR1_0-1":
+    {
+        "videoArUrl" : "video/중1_QR0/중1_QR1_0-1_음악의기초1-2_ar.mp4",
+        "videoMrUrl" : "video/중1_QR0/중1_QR1_0-1_음악의기초1-2_mr.mp4",
+        "videoArFirstUrl" : "video/중1_QR0/중1_QR1_0-3_우오이에아1_ar",
+        "videoArSecondUrl" : "video/중1_QR0/중1_QR1_0-3_우오이에아1_mr",
+        "playType" : "solo",
+        "sectionTime" : [10, 20, 30, 40, 50, 60]
+    },
+    "QR1_0-1":
+    {
+        "videoArUrl" : "video/중1_QR0/중1_QR1_0-1_음악의기초1-2_ar.mp4",
+        "videoMrUrl" : "video/중1_QR0/중1_QR1_0-1_음악의기초1-2_mr.mp4",
+        "videoArFirstUrl" : "video/중1_QR0/중1_QR1_0-3_우오이에아1_ar",
+        "videoArSecondUrl" : "video/중1_QR0/중1_QR1_0-3_우오이에아1_mr",
+        "playType" : "solo",
+        "sectionTime" : [10, 20, 30, 40, 50, 60]
+    },
+    "QR1_0-1":
+    {
+        "videoArUrl" : "video/중1_QR0/중1_QR1_0-1_음악의기초1-2_ar.mp4",
+        "videoMrUrl" : "video/중1_QR0/중1_QR1_0-1_음악의기초1-2_mr.mp4",
+        "videoArFirstUrl" : "video/중1_QR0/중1_QR1_0-3_우오이에아1_ar",
+        "videoArSecondUrl" : "video/중1_QR0/중1_QR1_0-3_우오이에아1_mr",
+        "playType" : "solo",
+        "sectionTime" : [10, 20, 30, 40, 50, 60]
+    },
+    "QR1_0-1":
+    {
+        "videoArUrl" : "video/중1_QR0/중1_QR1_0-1_음악의기초1-2_ar.mp4",
+        "videoMrUrl" : "video/중1_QR0/중1_QR1_0-1_음악의기초1-2_mr.mp4",
+        "videoArFirstUrl" : "video/중1_QR0/중1_QR1_0-3_우오이에아1_ar",
+        "videoArSecondUrl" : "video/중1_QR0/중1_QR1_0-3_우오이에아1_mr",
+        "playType" : "solo",
+        "sectionTime" : [10, 20, 30, 40, 50, 60]
+    },
+}
