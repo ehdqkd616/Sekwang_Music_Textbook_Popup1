@@ -4,14 +4,6 @@
     margin: 20px 0px 20px 0px;
 }
 
-.scores{
-    display: none;
-}
-
-.scores.onShow{
-    display: block;
-}
-
 .btn-play {
     display: none;
 }
@@ -19,15 +11,6 @@
 .btn-play.onShow {
     display: inline-block;
 }
-
-.section-btn-area{
-    display: none;
-}
-
-.section-btn-area.onShow{
-    display: block;
-}
-
 
 figure video {
     width: 100%;

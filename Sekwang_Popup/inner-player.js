@@ -4,22 +4,19 @@ const urlObject =  new URL(url);
 const urlParams = urlObject.searchParams;
 
 // 설정 파일 불러오기
-// const videoUrl = urlParams.get('videoUrl');
-const videoUrl = "QR1_0-1";
-// const videoInfo = JSON.parse(JSON.stringify(videoList));
+const videoUrl = urlParams.get('videoUrl');
+// const videoUrl = "QR1_0-1";
 const videoAllList = JSON.parse(JSON.stringify(videoList));
 const videoInfo = videoAllList[videoUrl];
-// console.log(`videoInfo: ${videoInfo}`);
-// console.log(videoInfo);
 
 const sectionTime = videoInfo["sectionTime"];
 const sectionCnt = sectionTime.length;
 
-console.log(`urlParams : ${urlParams}`);
-console.log(`videoUrl : ${videoUrl}`);
-console.log(`videoInfo : ${videoInfo.videoArUrl}`);
-console.log(`sectionTime: ${sectionTime}`);
-console.log(`sectionCnt: ${sectionCnt}`);
+// console.log(`urlParams : ${urlParams}`);
+// console.log(`videoUrl : ${videoUrl}`);
+// console.log(`videoInfo : ${videoInfo.videoArUrl}`);
+// console.log(`sectionTime: ${sectionTime}`);
+// console.log(`sectionCnt: ${sectionCnt}`);
 
 $(document).ready(function(){
 
@@ -51,11 +48,9 @@ Frame.videoLoading = function ( url ) {
     $("#vd_score").attr("src", url);
     $("#vd_score").get(0).pause();
 
-    // $("#score-ar").attr("src", videoArUrl);
-    // $("#score-mr").attr("src", videoMrUrl);
-    // $("#score-ar-first").attr("src", videoArFirstUrl);
-    // $("#score-ar-second").attr("src", videoArSecondUrl);
-    
+    // 구간 버튼 초기화
+    $(".section-btn").addClass("btn-secondary");
+    $(".section-btn").removeClass("btn-primary");
 }
 
 // 구간별 시간 배열 등록
@@ -77,6 +72,7 @@ Frame.sectionDataLoading = function () {
 // 플레이 방식 버튼 이벤트 등록
 Frame.playMethodBtnEventRegister = function () {
 
+    // AR 듣기
     $(document).on("click", ".btn-play-ar", function () {
 
         Frame.videoLoading( videoInfo.videoArUrl );
@@ -87,10 +83,9 @@ Frame.playMethodBtnEventRegister = function () {
         $(this).removeClass("btn-secondary");
 
         $("#score").get(0).pause();
-        console.log("play-ar");
-
     });
 
+    // MR 듣기
     $(document).on("click", ".btn-play-mr", function () {
 
         Frame.videoLoading( videoInfo.videoMrUrl );
@@ -99,11 +94,57 @@ Frame.playMethodBtnEventRegister = function () {
         $(".btn-play").removeClass("btn-primary");
         $(this).addClass("btn-primary");
         $(this).removeClass("btn-secondary");
-
-        console.log("play-mr");
-
     });
 
+    // 변형 AR 듣기
+    $(document).on("click", ".btn-play-var-ar", function () {
+
+        Frame.videoLoading( videoInfo.videoArUrl );
+
+        $(".btn-play").addClass("btn-secondary");
+        $(".btn-play").removeClass("btn-primary");
+        $(this).addClass("btn-primary");
+        $(this).removeClass("btn-secondary");
+
+        $("#score").get(0).pause();
+    });
+
+    // 변형 MR 듣기
+    $(document).on("click", ".btn-play-var-mr", function () {
+
+        Frame.videoLoading( videoInfo.videoMrUrl );
+
+        $(".btn-play").addClass("btn-secondary");
+        $(".btn-play").removeClass("btn-primary");
+        $(this).addClass("btn-primary");
+        $(this).removeClass("btn-secondary");
+    });
+
+    // 원어 AR 듣기
+    $(document).on("click", ".btn-play-original-ar", function () {
+
+        Frame.videoLoading( videoInfo.videoArUrl );
+
+        $(".btn-play").addClass("btn-secondary");
+        $(".btn-play").removeClass("btn-primary");
+        $(this).addClass("btn-primary");
+        $(this).removeClass("btn-secondary");
+
+        $("#score").get(0).pause();
+    });
+
+    // 원어 MR 듣기
+    $(document).on("click", ".btn-play-original-mr", function () {
+
+        Frame.videoLoading( videoInfo.videoMrUrl );
+
+        $(".btn-play").addClass("btn-secondary");
+        $(".btn-play").removeClass("btn-primary");
+        $(this).addClass("btn-primary");
+        $(this).removeClass("btn-secondary");
+    });
+
+    // 1성부 듣기
     $(document).on("click", ".btn-play-ar-first", function () {
 
         Frame.videoLoading( videoInfo.videoArFirstUrl );
@@ -113,10 +154,9 @@ Frame.playMethodBtnEventRegister = function () {
         $(this).addClass("btn-primary");
         $(this).removeClass("btn-secondary");
 
-        console.log("play-ar-first");
-
     });
 
+    // 2성부 듣기
     $(document).on("click", ".btn-play-ar-second", function () {
 
         Frame.videoLoading( videoInfo.videoArSecondUrl );
@@ -125,8 +165,6 @@ Frame.playMethodBtnEventRegister = function () {
         $(".btn-play").removeClass("btn-primary");
         $(this).addClass("btn-primary");
         $(this).removeClass("btn-secondary");
-
-        console.log("play-ar-second");
 
     });
 
@@ -164,4 +202,11 @@ Frame.sectionBtnEventRegister = function () {
         });
 
     }
+}
+
+
+
+// 카운트 다운 효과 개발 예정
+Frame.countDown = function () {
+    
 }
