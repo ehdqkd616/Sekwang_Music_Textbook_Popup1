@@ -6,8 +6,10 @@ const urlParams = urlObject.searchParams;
 // 설정 파일 불러오기
 const videoUrl = urlParams.get('videoUrl');
 // const videoUrl = "QR1_0-1";
-const videoAllList = JSON.parse(JSON.stringify(videoList));
-const videoInfo = videoAllList[videoUrl];
+// const videoAllList = JSON.parse(JSON.stringify(videoList));
+const videoAllList2 = JSON.parse(JSON.stringify(videoList));
+// const videoInfo = videoAllList[videoUrl];
+const videoInfo = videoAllList2[videoUrl];
 
 const sectionTime = videoInfo["sectionTime"];
 const sectionCnt = sectionTime.length;
@@ -47,6 +49,12 @@ Frame.videoLoading = function ( url ) {
     // 비디오 데이터 로딩
     $("#vd_score").attr("src", url);
     $("#vd_score").get(0).pause();
+
+
+    // 볼륨 컨트롤
+    $("#vd_score").get(0).volume = 0.2;
+
+
 
     // 구간 버튼 초기화
     $(".section-btn").addClass("btn-secondary");
@@ -99,7 +107,7 @@ Frame.playMethodBtnEventRegister = function () {
     // 변형 AR 듣기
     $(document).on("click", ".btn-play-var-ar", function () {
 
-        Frame.videoLoading( videoInfo.videoArUrl );
+        Frame.videoLoading( videoInfo.videoArVarUrl );
 
         $(".btn-play").addClass("btn-secondary");
         $(".btn-play").removeClass("btn-primary");
@@ -112,7 +120,7 @@ Frame.playMethodBtnEventRegister = function () {
     // 변형 MR 듣기
     $(document).on("click", ".btn-play-var-mr", function () {
 
-        Frame.videoLoading( videoInfo.videoMrUrl );
+        Frame.videoLoading( videoInfo.videoMrVarUrl );
 
         $(".btn-play").addClass("btn-secondary");
         $(".btn-play").removeClass("btn-primary");
@@ -123,7 +131,7 @@ Frame.playMethodBtnEventRegister = function () {
     // 원어 AR 듣기
     $(document).on("click", ".btn-play-original-ar", function () {
 
-        Frame.videoLoading( videoInfo.videoArUrl );
+        Frame.videoLoading( videoInfo.videoArOriginalUrl );
 
         $(".btn-play").addClass("btn-secondary");
         $(".btn-play").removeClass("btn-primary");
@@ -136,7 +144,7 @@ Frame.playMethodBtnEventRegister = function () {
     // 원어 MR 듣기
     $(document).on("click", ".btn-play-original-mr", function () {
 
-        Frame.videoLoading( videoInfo.videoMrUrl );
+        Frame.videoLoading( videoInfo.videoMrOriginalUrl );
 
         $(".btn-play").addClass("btn-secondary");
         $(".btn-play").removeClass("btn-primary");
