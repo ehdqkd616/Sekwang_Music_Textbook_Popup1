@@ -4,28 +4,28 @@ videoList = {
         "videoArUrl" : "video/중1_QR0/중1_QR1_0-1_음악의기초1-2_ar.mp4",
         "videoMrUrl" : "video/중1_QR0/중1_QR1_0-1_음악의기초1-2_mr.mp4",
         "playType" : "solo",
-        "sectionTime" : [10, 20, 30, 40, 50, 60]
+        "sectionTime" : [0, 4.7]
     },
     "QR1_0-2":
     {
         "videoArUrl" : "video/중1_QR0/중1_QR1_0-2_음악의기초 (그래그래서)_ar.mp4",
         "videoMrUrl" : "video/중1_QR0/중1_QR1_0-2_음악의기초 (그래그래서)_mr.mp4",
         "playType" : "solo",
-        "sectionTime" : [10, 20, 30, 40, 50, 60]
+        "sectionTime" : [4.7, 9.5, 14.3, 19.2]
     },
-    "QR0_0-3":
+    "QR1_0-3":
     {
         "videoArUrl" : "video/중1_QR0/중1_QR1_0-3_우오이에아1_ar.mp4",
         "videoMrUrl" : "video/중1_QR0/중1_QR1_0-3_우오이에아1_mr.mp4",
         "playType" : "solo",
-        "sectionTime" : [10, 20, 30, 40, 50, 60]
+        "sectionTime" : [6, 13, 20.1, 27.2, 34.5]
     },
-    "QR0_0-4":
+    "QR1_0-4":
     {
         "videoArUrl" : "video/중1_QR0/중1_QR1_0-4_우오이에아2_ar.mp4",
         "videoMrUrl" : "video/중1_QR0/중1_QR1_0-4_우오이에아2_mr.mp4",
         "playType" : "solo",
-        "sectionTime" : [10, 20, 30, 40, 50, 60]
+        "sectionTime" : [4.1, 11.3, 18.3, 25.7, 32.5]
     },
 
 
@@ -292,7 +292,7 @@ videoList = {
         "videoMrUrl" : "video/중1_QR5/중1_QR5_5-1_모리화_mr.mp4",
         "videoArOriginalUrl" : "video/중1_QR5/중1_QR5_5-1_모리화_원어_ar.mp4",
         "playType" : "solo",
-        "sectionTime" : [10, 20, 30, 40, 50, 60]
+        "sectionTime" : [9.6, 14.5, 19, 24, 28.8, 33.5, 37.3]
     },
     "QR5_5-2":
     {
@@ -300,14 +300,14 @@ videoList = {
         "videoMrUrl" : "video/중1_QR5/중1_QR5_5-2_소란부시_mr.mp4",
         "videoArOriginalUrl" : "video/중1_QR5/중1_QR5_5-2_소란부시_원어_ar.mp4",
         "playType" : "solo",
-        "sectionTime" : [10, 20, 30, 40, 50, 60]
+        "sectionTime" : [9.6, 18, 23, 28]
     },
     "QR5_5-3":
     {
         "videoArUrl" : "video/중1_QR5/중1_QR5_5-3_어린이들의 축제_ar.mp4",
         "videoMrUrl" : "video/중1_QR5/중1_QR5_5-3_어린이들의 축제_mr.mp4",
         "playType" : "solo",
-        "sectionTime" : [10, 20, 30, 40, 50, 60]
+        "sectionTime" : [7, 13.8, 21, 27.8, 34.8]
     },
     "QR5_5-4":
     {
@@ -315,7 +315,7 @@ videoList = {
         "videoMrUrl" : "video/중1_QR5/중1_QR5_5-4_다융삼판_mr.mp4",
         "videoArOriginalUrl" : "video/중1_QR5/중1_QR5_5-4_다융삼판_원어_ar.mp4",
         "playType" : "solo",
-        "sectionTime" : [10, 20, 30, 40, 50, 60]
+        "sectionTime" : [8.5, 15.8, 27, 34.5]
     },
     "QR5_5-5":
     {
@@ -323,7 +323,7 @@ videoList = {
         "videoMrUrl" : "video/중1_QR5/중1_QR5_5-5_꽃은 지고_mr.mp4",
         "videoArOriginalUrl" : "video/중1_QR5/중1_QR5_5-5_꽃은 지고_원어_ar.mp4",
         "playType" : "solo",
-        "sectionTime" : [10, 20, 30, 40, 50, 60]
+        "sectionTime" : [6, 14]
     },
     "QR5_5-6":
     {
@@ -331,7 +331,7 @@ videoList = {
         "videoMrUrl" : "video/중1_QR5/중1_QR5_5-6_위스퀴다르_mr.mp4",
         "videoArOriginalUrl" : "video/중1_QR5/중1_QR5_5-6_위스퀴다르_원어_ar.mp4",
         "playType" : "solo",
-        "sectionTime" : [10, 20, 30, 40, 50, 60]
+        "sectionTime" : [10, 19.5, 29.5, 39]
     },
     "QR5_5-7":
     {
@@ -339,7 +339,7 @@ videoList = {
         "videoMrUrl" : "video/중1_QR5/중1_QR5_5-7_잠보_mr.mp4",
         "videoArOriginalUrl" : "video/중1_QR5/중1_QR5_5-7_잠보_원어_ar.mp4",
         "playType" : "solo",
-        "sectionTime" : [10, 20, 30, 40, 50, 60]
+        "sectionTime" : [8.5, 16, 24, 31.5]
     },
 
 
@@ -359,36 +359,36 @@ videoList = {
         "videoArUrl" : "video/중1_QR6/중1_QR6_1-2_Ditto_ar.mp4",
         "videoMrUrl" : "video/중1_QR6/중1_QR6_1-2_Ditto_mr.mp4",
         "playType" : "solo",
-        "sectionTime" : [10, 20, 30, 40, 50, 60]
+        "sectionTime" : [2, 9, 17]
     },
     "QR6_1-3":
     {
         "videoArUrl" : "video/중1_QR6/중1_QR6_1-3_언제나 몇 번이라도_ar.mp4",
         "videoMrUrl" : "video/중1_QR6/중1_QR6_1-3_언제나 몇 번이라도_mr.mp4",
         "playType" : "solo",
-        "sectionTime" : [10, 20, 30, 40, 50, 60]
+        "sectionTime" : [3.5, 11.8, 20, 28.3, 38.2, 54.5, 63.5]
     },
 
     "QR6_2-1":
     {
-        "videoArUrl" : "video/중1_QR0/중1_QR6_2-1_젓가락 행진곡_ar(붐웨커는 모션x).mp4",
-        "videoMrUrl" : "video/중1_QR0/중1_QR6_2-1_젓가락 행진곡_mr(붐웨커는 모션x).mp4",
+        "videoArUrl" : "video/중1_QR6/중1_QR6_2-1_젓가락 행진곡_ar(붐웨커는 모션x).mp4",
+        "videoMrUrl" : "video/중1_QR6/중1_QR6_2-1_젓가락 행진곡_mr(붐웨커는 모션x).mp4",
         "playType" : "solo",
-        "sectionTime" : [10, 20, 30, 40, 50, 60]
+        "sectionTime" : [4.8, 10.4, 15.5, 20.5]
     },
     "QR6_2-2":
     {
         "videoArUrl" : "video/중1_QR6/중1_QR6_2-1_학교종_ar(붐웨커는 모션x).mp4",
         "videoMrUrl" : "video/중1_QR6/중1_QR6_2-1_학교종_mr(붐웨커는 모션x).mp4",
         "playType" : "solo",
-        "sectionTime" : [10, 20, 30, 40, 50, 60]
+        "sectionTime" : [8.5, 17.5]
     },
     "QR6_2-3":
     {
         "videoArUrl" : "video/중1_QR6/중1_QR6_2-2_Under the sea_ar(붐웨커는 모션x).mp4",
         "videoMrUrl" : "video/중1_QR6/중1_QR6_2-2_Under the sea_mr(붐웨커는 모션x).mp4",
         "playType" : "solo",
-        "sectionTime" : [10, 20, 30, 40, 50, 60]
+        "sectionTime" : [6.8, 13.5,     20.5, 27.5,     34, 41]
     },
 
     "QR6_3-1":
@@ -396,22 +396,23 @@ videoList = {
         "videoArUrl" : "video/중1_QR6/중1_QR6_3-1_할아버지의 시계_ar.mp4",
         "videoMrUrl" : "video/중1_QR6/중1_QR6_3-1_할아버지의 시계_mr.mp4",
         "playType" : "solo",
-        "sectionTime" : [10, 20, 30, 40, 50, 60]
+        "sectionTime" : [5, 16]
     },
     "QR6_3-2":
     {
         "videoArUrl" : "video/중1_QR6/중1_QR6_3-2_수고했어, 오늘도_ar.mp4",
         "videoMrUrl" : "video/중1_QR6/중1_QR6_3-2_수고했어, 오늘도_mr.mp4",
         "playType" : "solo",
-        "sectionTime" : [10, 20, 30, 40, 50, 60]
+        "sectionTime" : [5, 14, 23, 32.5, 41.5, 51, 59, 69.5, 78.8]
     },
 
     "QR6_4":
     {
         "videoArUrl" : "video/중1_QR6/중1_QR6_4_여행을 떠나요_ar.mp4",
-        "videoMrUrl" : "video/중1_QR6/중1_QR6_4_여행을 떠나요_smr.mp4",
+        "videoMrUrl" : "video/중1_QR6/중1_QR6_4_여행을 떠나요_mr.mp4",
         "playType" : "solo",
-        "sectionTime" : [10, 20, 30, 40, 50, 60]
+        "verseCnt" : 2,
+        "sectionTime" : [4.5, 10.8, 17, 23, 29.5, 35.5, 41.5, 48.5, 54, 60.8]
     },
 
     "QR6_5-2":
@@ -419,21 +420,21 @@ videoList = {
         "videoArUrl" : "video/중1_QR6/중1_QR6_5-2_비행기.mp4",
         "videoMrUrl" : "video/중1_QR6/중1_QR6_5-2_비행기.mp4",
         "playType" : "solo",
-        "sectionTime" : [10, 20, 30, 40, 50, 60]
+        "sectionTime" : [0, 9.6]
     },
     "QR6_5-3":
     {
         "videoArUrl" : "video/중1_QR6/중1_QR6_5-3_새야새야.mp4",
         "videoMrUrl" : "video/중1_QR6/중1_QR6_5-3_새야새야.mp4",
         "playType" : "solo",
-        "sectionTime" : [10, 20, 30, 40, 50, 60]
+        "sectionTime" : [0, 3.5, 7, 10.3]
     },
     "QR6_5-4":
     {
         "videoArUrl" : "video/중1_QR6/중1_QR6_5-4_영산회상 중 타령.mp4",
         "videoMrUrl" : "video/중1_QR6/중1_QR6_5-4_영산회상 중 타령.mp4",
         "playType" : "solo",
-        "sectionTime" : [10, 20, 30, 40, 50, 60]
+        "sectionTime" : [0, 8, 16, 24, 32, 40]
     },
 
     "QR6_6-1":
@@ -441,55 +442,55 @@ videoList = {
         "videoArUrl" : "video/중1_QR6/중1_QR6_6-1_장구.mp4",
         "videoMrUrl" : "video/중1_QR6/중1_QR6_6-1_장구.mp4",
         "playType" : "solo",
-        "sectionTime" : [10, 20, 30, 40, 50, 60]
+        "sectionTime" : []
     },
     "QR6_6-2":
     {
         "videoArUrl" : "video/중1_QR6/중1_QR6_6-2_장구_세마치.mp4",
         "videoMrUrl" : "video/중1_QR6/중1_QR6_6-2_장구_세마치.mp4",
         "playType" : "solo",
-        "sectionTime" : [10, 20, 30, 40, 50, 60]
+        "sectionTime" : []
     },
     "QR6_6-3":
     {
         "videoArUrl" : "video/중1_QR6/중1_QR6_6-3_장구_굿거리.mp4",
         "videoMrUrl" : "video/중1_QR6/중1_QR6_6-3_장구_굿거리.mp4",
         "playType" : "solo",
-        "sectionTime" : [10, 20, 30, 40, 50, 60]
+        "sectionTime" : []
     },
     "QR6_6-4":
     {
         "videoArUrl" : "video/중1_QR6/중1_QR6_6-4_장구_중중모리.mp4",
         "videoMrUrl" : "video/중1_QR6/중1_QR6_6-4_장구_중중모리.mp4",
         "playType" : "solo",
-        "sectionTime" : [10, 20, 30, 40, 50, 60]
+        "sectionTime" : []
     },
     "QR6_6-5":
     {
         "videoArUrl" : "video/중1_QR6/중1_QR6_6-5_장구_자진모리.mp4",
         "videoMrUrl" : "video/중1_QR6/중1_QR6_6-5_장구_자진모리.mp4",
         "playType" : "solo",
-        "sectionTime" : [10, 20, 30, 40, 50, 60]
+        "sectionTime" : []
     },
     "QR6_6-6":
     {
         "videoArUrl" : "video/중1_QR6/중1_QR6_6-6_장구_엇모리.mp4",
         "videoMrUrl" : "video/중1_QR6/중1_QR6_6-6_장구_엇모리.mp4",
         "playType" : "solo",
-        "sectionTime" : [10, 20, 30, 40, 50, 60]
+        "sectionTime" : []
     },
     "QR6_6-7":
     {
         "videoArUrl" : "video/중1_QR6/중1_QR6_6-7_장구_단모리.mp4",
         "videoMrUrl" : "video/중1_QR6/중1_QR6_6-7_장구_단모리.mp4",
         "playType" : "solo",
-        "sectionTime" : [10, 20, 30, 40, 50, 60]
+        "sectionTime" : []
     },
     "QR6_7":
     {
         "videoArUrl" : "video/중1_QR6/중1_QR6_7_학교가는 길.mp4",
         "videoMrUrl" : "video/중1_QR6/중1_QR6_7_학교가는 길.mp4",
         "playType" : "solo",
-        "sectionTime" : [10, 20, 30, 40, 50, 60]
+        "sectionTime" : [4, 13, 22.5, 31, 40.5, 49.8, 63]
     },
 }

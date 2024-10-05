@@ -6,10 +6,10 @@ const urlParams = urlObject.searchParams;
 // 설정 파일 불러오기
 const videoUrl = urlParams.get('videoUrl');
 // const videoUrl = "QR1_0-1";
-// const videoAllList = JSON.parse(JSON.stringify(videoList));
-const videoAllList2 = JSON.parse(JSON.stringify(videoList));
+const videoAllList = JSON.parse(JSON.stringify(videoList));
+// const videoAllList2 = JSON.parse(JSON.stringify(videoList));
 // const videoInfo = videoAllList[videoUrl];
-const videoInfo = videoAllList2[videoUrl];
+const videoInfo = videoAllList[videoUrl];
 
 const sectionTime = videoInfo["sectionTime"];
 const sectionCnt = sectionTime.length;
@@ -52,7 +52,7 @@ Frame.videoLoading = function ( url ) {
 
 
     // 볼륨 컨트롤
-    $("#vd_score").get(0).volume = 0.2;
+    $("#vd_score").get(0).volume = 0.4;
 
 
 

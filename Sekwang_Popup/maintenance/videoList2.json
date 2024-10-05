@@ -138,14 +138,14 @@ videoList = {
         "videoMrUrl" : "video/중2_QR2/중2_QR2_2-4_몽금포타령_MR.mp4",
         "playType" : "solo",
         "verseCnt" : 2,
-        "sectionTime" : [10, 20, 30, 40, 50, 60]
+        "sectionTime" : [13, 19.5, 26.3, 32.8, 39, 45.5]
     },
     "QR2_2-5":
     {
         "videoArUrl" : "video/중2_QR2/중2_QR2_2-5_밀양아리랑_AR.mp4",
         "videoMrUrl" : "video/중2_QR2/중2_QR2_2-5_밀양아리랑_MR.mp4",
         "playType" : "solo",
-        "sectionTime" : [10, 20, 30, 40, 50, 60]
+        "sectionTime" : [7.2, 14.2, 21.2, 28.2]
     },
     "QR2_2-6":
     {
@@ -156,14 +156,14 @@ videoList = {
         "videoArVarUrl2" : "video/중2_QR2/중2_QR2_2-6_통영개타령_변형2_AR.mp4",
         "videoMrVarUrl2" : "video/중2_QR2/중2_QR2_2-6_통영개타령_변형2_MR.mp4",
         "playType" : "solo",
-        "sectionTime" : [10, 20, 30, 40, 50, 60]
+        "sectionTime" : [4.5, 8.8, 13.2, 17.5, 21.8, 26.4, 30.7]
     },
     "QR2_2-7":
     {
         "videoArUrl" : "video/중2_QR2/중2_QR2_2-7_가곡편락나무도_AR.mp4",
         "videoMrUrl" : "video/중2_QR2/중2_QR2_2-7_가곡편락나무도_MR.mp4",
         "playType" : "solo",
-        "sectionTime" : [10, 20, 30, 40, 50, 60]
+        "sectionTime" : [44.8]
     },
 
 
@@ -178,35 +178,36 @@ videoList = {
         "videoArUrl" : "video/중2_QR3/중2_QR3_3-1_오랜날오랜밤_AR.mp4",
         "videoMrUrl" : "video/중2_QR3/중2_QR3_3-1_오랜날오랜밤_MR.mp4",
         "playType" : "solo",
-        "sectionTime" : [10, 20, 30, 40, 50, 60]
+        "sectionTime" : [18, 27.5, 36, 45.5, 54.5, 62, 75, 84, 91.3, 100.2]
     },
     "QR3_3-2":
     {
         "videoArUrl" : "video/중2_QR3/중2_QR3_3-2_제주도의푸른밤_AR.mp4",
         "videoMrUrl" : "video/중2_QR3/중2_QR3_3-2_제주도의푸른밤_MR.mp4",
         "playType" : "solo",
-        "sectionTime" : [10, 20, 30, 40, 50, 60]
+        "sectionTime" : [8, 16.8, 25.8, 34.5, 44.5, 53.3, 63.5, 72.3]
     },
     "QR3_3-3":
     {
         "videoArUrl" : "video/중2_QR3/중2_QR3_3-3_바람의빛깔_AR.mp4",
         "videoMrUrl" : "video/중2_QR3/중2_QR3_3-3_바람의빛깔_MR.mp4",
         "playType" : "solo",
-        "sectionTime" : [10, 20, 30, 40, 50, 60]
+        "sectionTime" : [13, 24, 36, 47.8, 59, 70.6, 82.5, 89.3, 102.5, 116.2, 128]
     },
     "QR3_3-4":
     {
         "videoArUrl" : "video/중2_QR3/중2_QR3_3-4_국가대표_AR.mp4",
         "videoMrUrl" : "video/중2_QR3/중2_QR3_3-4_국가대표_MR.mp4",
         "playType" : "solo",
-        "sectionTime" : [10, 20, 30, 40, 50, 60]
+        "verseCnt" : 2,
+        "sectionTime" : [17.8, 26.8, 35.4, 43.9, 53, 61.5, 69, 78.5,      99.3, 107.8, 116.5, 125.5, 134, 143, 150.5, 160]
     },
     "QR3_3-5":
     {
         "videoArUrl" : "video/중2_QR3/중2_QR3_3-5_미리메리크리스마스_AR.mp4",
         "videoMrUrl" : "video/중2_QR3/중2_QR3_3-5_미리메리크리스마스_MR.mp4",
         "playType" : "solo",
-        "sectionTime" : [10, 20, 30, 40, 50, 60]
+        "sectionTime" : [8, 17, 28.8, 36.5, 44.8, 52.5, 59.8, 67.4]
     },
 
 
@@ -222,21 +223,22 @@ videoList = {
         "videoMrUrl" : "video/중2_QR4/중2_QR4_4-1_여자의마음_MR.mp4",
         "videoArOriginalUrl" : "video/중2_QR4/중2_QR4_4-1_여자의마음_ITL.mp4",
         "playType" : "solo",
-        "sectionTime" : [10, 20, 30, 40, 50, 60]
+        "sectionTime" : [2.5, 13, 23, 28.4]
     },
     "QR4_4-2":
     {
         "videoArUrl" : "video/중2_QR4/중2_QR4_4-2_지옥의복수가_AR.mp4",
         "videoMrUrl" : "video/중2_QR4/중2_QR4_4-2_지옥의복수가_MR.mp4",
         "playType" : "solo",
-        "sectionTime" : [10, 20, 30, 40, 50, 60]
+        "sectionTime" : [2.7, 10.5, 17.2, 24, 31.2, 37.8, 43.5, 50.7, 57.3]
     },
     "QR4_4-3":
     {
         "videoArUrl" : "video/중2_QR4/중2_QR4_4-3_myfavoritething_AR.mp4",
         "videoMrUrl" : "video/중2_QR4/중2_QR4_4-3_myfavoritething_MR.mp4",
         "playType" : "solo",
-        "sectionTime" : [10, 20, 30, 40, 50, 60]
+        "verseCnt" : 2,
+        "sectionTime" : [4.3, 13.3,      22.3, 31.3, 40.6, 49]
     },
     "QR4_4-4":
     {
@@ -244,14 +246,14 @@ videoList = {
         "videoMrUrl" : "video/중2_QR4/중2_QR4_4-4_누가죄인인가_MR.mp4",
         "videoArOriginalUrl" : "video/중2_QR4/중2_QR4_4-4_I have a dream_원어_ar.mp4",
         "playType" : "solo",
-        "sectionTime" : [10, 20, 30, 40, 50, 60]
+        "sectionTime" : [6, 11.5, 17.5, 23.8, 29.3, 35.5]
     },
     "QR4_4-5":
     {
         "videoArUrl" : "video/중2_QR4/중2_QR4_4-5_살다보면_AR.mp4",
         "videoMrUrl" : "video/중2_QR4/중2_QR4_4-5_살다보면_MR.mp4",
         "playType" : "solo",
-        "sectionTime" : [10, 20, 30, 40, 50, 60]
+        "sectionTime" : [12.5, 25, 37.5, 50, 62.5, 75, 87.5, 100.3]
     },
 
 
@@ -267,7 +269,7 @@ videoList = {
         "videoMrUrl" : "video/중2_QR5/중2_QR5_5-1_내가탄마차는_MR.mp4",
         "videoArOriginalUrl" : "video/중2_QR5/중2_QR5_5-1_내가탄마차는_ENG.mp4",
         "playType" : "solo",
-        "sectionTime" : [10, 20, 30, 40, 50, 60]
+        "sectionTime" : [9.8, 19.5, 28.7, 38.7, 49, 58.6]
     },
     "QR5_5-2":
     {
@@ -275,7 +277,7 @@ videoList = {
         "videoMrUrl" : "video/중2_QR5/중2_QR5_5-2_라쿠카라차_MR.mp4",
         "videoArOriginalUrl" : "video/중2_QR5/중2_QR5_5-2_라쿠카라차_ESP.mp4",
         "playType" : "solo",
-        "sectionTime" : [10, 20, 30, 40, 50, 60]
+        "sectionTime" : [2.5, 7.8, 13.2, 18.4, 23, 28.4, 33.6, 39]
     },
     "QR5_5-3":
     {
@@ -283,7 +285,7 @@ videoList = {
         "videoMrUrl" : "video/중2_QR5/중2_QR5_5-3_연가_MR.mp4",
         "videoArOriginalUrl" : "video/중2_QR5/중2_QR5_5-3_연가_KOR.mp4",
         "playType" : "solo",
-        "sectionTime" : [10, 20, 30, 40, 50, 60]
+        "sectionTime" : [9.6, 19.6, 29, 38.8, 48.5, 57.5, 67.2, 77]
     },
     "QR5_5-4":
     {
@@ -291,28 +293,29 @@ videoList = {
         "videoMrUrl" : "video/중2_QR5/중2_QR5_5-4_월칭마틸다_MR.mp4",
         "videoArOriginalUrl" : "video/중2_QR5/중2_QR5_5-4_월칭마틸다_ENG.mp4",
         "playType" : "solo",
-        "sectionTime" : [10, 20, 30, 40, 50, 60]
+        "sectionTime" : [8, 15.5, 24, 31.5]
     },
     "QR5_5-5":
     {
         "videoArUrl" : "video/중2_QR5/중2_QR5_5-5_피노키오_AR.mp4",
         "videoMrUrl" : "video/중2_QR5/중2_QR5_5-5_피노키오_MR.mp4",
         "playType" : "solo",
-        "sectionTime" : [10, 20, 30, 40, 50, 60]
+        "sectionTime" : [9.2, 17, 24.5, 32.8, 41.6, 48, 57]
     },
     "QR5_5-6":
     {
         "videoArUrl" : "video/중2_QR5/중2_QR5_5-6_피크닉의노래_AR.mp4",
         "videoMrUrl" : "video/중2_QR5/중2_QR5_5-6_피크닉의노래_MR.mp4",
         "playType" : "solo",
-        "sectionTime" : [10, 20, 30, 40, 50, 60]
+        "sectionTime" : [9, 18, 27, 36, 44.3]
     },
     "QR5_5-7":
     {
         "videoArUrl" : "video/중2_QR5/중2_QR5_5-7_아름다운베르네산골_AR.mp4",
         "videoMrUrl" : "video/중2_QR5/중2_QR5_5-7_아름다운베르네산골_MR.mp4",
         "playType" : "solo",
-        "sectionTime" : [10, 20, 30, 40, 50, 60]
+        "verseCnt" : 2,
+        "sectionTime" : [7.8, 14.8, 21.6, 28.8, 35.6, 42.6,      50, 57.2, 64, 71.1, 77.8, 84.8]
     },
 
 
@@ -325,96 +328,96 @@ videoList = {
     {
         "videoArUrl" : "video/중2_QR6/중2_QR6_1-1_리코더음계.mp4",
         "playType" : "solo",
-        "sectionTime" : [10, 20, 30, 40, 50, 60]
+        "sectionTime" : []
     },
     "QR6_1-1":
     {
         "videoArUrl" : "video/중2_QR6/중2_QR6_1-1_비비디바비디부_AR.mp4",
         "videoMrUrl" : "video/중2_QR6/중2_QR6_1-1_비비디바비디부_MR.mp4",
         "playType" : "solo",
-        "sectionTime" : [10, 20, 30, 40, 50, 60]
+        "sectionTime" : [6, 12.5]
     },
     "QR6_1-2":
     {
         "videoArUrl" : "video/중2_QR6/중2_QR6_1-2_사랑은길들지않는새_AR.mp4",
         "videoMrUrl" : "video/중2_QR6/중2_QR6_1-2_사랑은길들지않는새_MR.mp4",
         "playType" : "solo",
-        "sectionTime" : [10, 20, 30, 40, 50, 60]
+        "sectionTime" : [0, 6, 13.5, 22.8, 30]
     },
 
     "QR6_2":
     {
-        "videoArUrl" : "video/중2_QR0/중2_QR6_2_반주유형1.mp4",
-        "videoMrUrl" : "video/중2_QR0/중2_QR6_2_반주유형2.mp4",
-        "videoMrUrl" : "video/중2_QR0/중2_QR6_2_코드와구성음.mp4",
+        "videoArUrl" : "video/중2_QR6/중2_QR6_2_반주유형1.mp4",
+        "videoMrUrl" : "video/중2_QR6/중2_QR6_2_반주유형2.mp4",
+        "videoArVarUrl" : "video/중2_QR6/중2_QR6_2_코드와구성음.mp4",
         "playType" : "solo",
-        "sectionTime" : [10, 20, 30, 40, 50, 60]
+        "sectionTime" : []
     },
     "QR6_2-1":
     {
-        "videoArUrl" : "video/중2_QR0/중2_QR6_2-1_비창소나타뽐내기.mp4",
-        "videoMrUrl" : "video/중2_QR0/중2_QR6_2-1_비창소나타실력다지기.mp4",
+        "videoArUrl" : "video/중2_QR6/중2_QR6_2-1_비창소나타뽐내기.mp4",
+        "videoMrUrl" : "video/중2_QR6/중2_QR6_2-1_비창소나타실력다지기.mp4",
         "playType" : "solo",
-        "sectionTime" : [10, 20, 30, 40, 50, 60]
+        "sectionTime" : []
     },
 
     "QR6_3-1":
     {
         "videoArUrl" : "video/중2_QR6/중2_QR6_3-1_드럼기본8비트연습1-3.mp4",
         "playType" : "solo",
-        "sectionTime" : [10, 20, 30, 40, 50, 60]
+        "sectionTime" : [0, 12.5, 25.8]
     },
     "QR6_3-2":
     {
         "videoArUrl" : "video/중2_QR6/중2_QR6_3-2_너의의미.mp4",
         "playType" : "solo",
-        "sectionTime" : [10, 20, 30, 40, 50, 60]
+        "sectionTime" : [0, 4.8, 11.8, 15.8]
     },
 
     "QR6_4-1":
     {
         "videoArUrl" : "video/중2_QR6/중2_QR6_4-1_기타코드.mp4",
         "playType" : "solo",
-        "sectionTime" : [10, 20, 30, 40, 50, 60]
+        "sectionTime" : [0, 5, 10.5, 15.5, 21.2, 27.2, 33.5]
     },
     "QR6_4-2":
     {
         "videoArUrl" : "video/중2_QR6/중2_QR6_4-2_얼굴찌푸리지말아요_AR.mp4",
         "videoMrUrl" : "video/중2_QR6/중2_QR6_4-2_얼굴찌푸리지말아요_MR.mp4",
         "playType" : "solo",
-        "sectionTime" : [10, 20, 30, 40, 50, 60]
+        "sectionTime" : [7.8, 15.6, 23.8, 31.6, 40, 47.2, 55, 63.4, 72, 79.6, 87.6, 95.6]
     },
 
     "QR6_5-1":
     {
         "videoArUrl" : "video/중2_QR6/중2_QR6_5-1_아리랑.mp4",
         "playType" : "solo",
-        "sectionTime" : [10, 20, 30, 40, 50, 60]
+        "sectionTime" : [0.5, 8.5, 16.5, 24.8]
     },
     "QR6_5-2":
     {
         "videoArUrl" : "video/중2_QR6/중2_QR6_5-2_진도아리랑.mp4",
         "playType" : "solo",
-        "sectionTime" : [10, 20, 30, 40, 50, 60]
+        "sectionTime" : []
     },
 
     "QR6_6":
     {
         "videoArUrl" : "video/중2_QR6/중2_QR6_6_사잇가락.mp4",
         "playType" : "solo",
-        "sectionTime" : [10, 20, 30, 40, 50, 60]
+        "sectionTime" : []
     },
     "QR6_6-1":
     {
         "videoArUrl" : "video/중2_QR6/중2_QR6_6-1_인사굿.mp4",
         "playType" : "solo",
-        "sectionTime" : [10, 20, 30, 40, 50, 60]
+        "sectionTime" : []
     },
     "QR6_6-2":
     {
         "videoArUrl" : "video/중2_QR6/중2_QR6_6-2_별달거리장단_음원수정.mp4",
         "playType" : "solo",
-        "sectionTime" : [10, 20, 30, 40, 50, 60]
+        "sectionTime" : []
     },
 
     "QR6_7":
@@ -422,6 +425,6 @@ videoList = {
         "videoArUrl" : "video/중2_QR6/중2_QR6_7_너에게난나에게넌_AR.mp4",
         "videoMrUrl" : "video/중2_QR6/중2_QR6_7_너에게난나에게넌_MR.mp4",
         "playType" : "solo",
-        "sectionTime" : [10, 20, 30, 40, 50, 60]
+        "sectionTime" : [24.5, 36, 48.5, 60.5, 72.5, 84.5, 96.5, 108.5]
     },
 }
