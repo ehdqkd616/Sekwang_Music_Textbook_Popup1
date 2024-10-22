@@ -23,6 +23,7 @@ $(document).ready(function(){
 
     // 페이지 최초 로딩
     Frame.pageLoading();
+
  
 });
 
@@ -35,6 +36,7 @@ Frame.pageLoading = function () {
     Frame.videoLoading(videoInfo.videoArUrl);
 
     // 절 및 구간 데이터 로딩
+    // Frame.sectionDataLoading();
     Frame.sectionDataLoading(videoInfo.verseType);
     
 }
@@ -50,11 +52,18 @@ Frame.videoLoading = function ( url ) {
     Frame.playTypeSetting(videoInfo.playType);
 
     // 볼륨 컨트롤
-    $("#vd_score").get(0).volume = 0.1;
+    $("#vd_score").get(0).volume = 0.4;
 
     // 구간 버튼 초기화
     $(".section-btn").addClass("btn-secondary");
     $(".section-btn").removeClass("btn-primary");
+
+
+
+
+    // // 절 버튼 초기화
+    // $(".verse-btn").addClass("btn-secondary");
+    // $(".verse-btn").removeClass("btn-primary");
 
 }
 
@@ -71,65 +80,39 @@ Frame.playTypeSetting = function ( playType ) {
             $(".play-select .btn-play-ar").addClass("onShow");
             $(".play-select .btn-play-mr").addClass("onShow");
             break;
+        case 'solo_verses':
+            $(".play-select .btn-play-ar").addClass("onShow");
+            $(".play-select .btn-play-mr").addClass("onShow");
+            break;
         case 'polyphony': 
             $(".play-select .btn-play-ar").addClass("onShow");
             $(".play-select .btn-play-mr").addClass("onShow");
-            $(".play-select .btn-play-ar-first").addClass("onShow");
-            $(".play-select .btn-play-ar-second").addClass("onShow");
-            break;
-        case 'multilingual': 
+        case 'solo': 
             $(".play-select .btn-play-ar").addClass("onShow");
             $(".play-select .btn-play-mr").addClass("onShow");
-            $(".play-select .btn-play-original-ar").addClass("onShow");
-            $(".play-select .btn-play-original-mr").addClass("onShow");
             break;
-        case 'multilingual2': 
-            $(".play-select .btn-play-ar").addClass("onShow");
-            $(".play-select .btn-play-mr").addClass("onShow");
-            $(".play-select .btn-play-original-ar").addClass("onShow");
-            break;
-        case 'multilingual2_polyphony': 
-            $(".play-select .btn-play-ar").addClass("onShow");
-            $(".play-select .btn-play-mr").addClass("onShow");
-            $(".play-select .btn-play-original-ar").addClass("onShow");
-            $(".play-select .btn-play-original-mr").addClass("onShow");
-            $(".play-select .btn-play-ar-first").addClass("onShow");
-            $(".play-select .btn-play-ar-second").addClass("onShow");
-            break;
-        case 'variation':
-            $(".play-select .btn-play-ar").addClass("onShow");
-            $(".play-select .btn-play-mr").addClass("onShow");
-            $(".play-select .btn-play-var-ar").addClass("onShow");
-            $(".play-select .btn-play-var-mr").addClass("onShow");
-            break;
-        case 'variation2':
-            $(".play-select .btn-play-ar").addClass("onShow");
-            $(".play-select .btn-play-mr").addClass("onShow");
-            $(".play-select .btn-play-var-ar").addClass("onShow");
-            $(".play-select .btn-play-var-mr").addClass("onShow");
-            $(".play-select .btn-play-var-ar2").addClass("onShow");
-            $(".play-select .btn-play-var-mr2").addClass("onShow");
-            break;
+        default:
+            // 플레이 방식 버튼 이벤트 등록
+            Frame.playMethodBtnEventRegister();
+        break;
     }
 
-    // 플레이 방식 버튼 이벤트 등록
-    Frame.playMethodBtnEventRegister();
 }
 
 // 구간별 시간 배열 등록
-Frame.sectionDataLoading = function ( verseType ) {
+Frame.sectionDataLoading = function () {
 
-    if( verseType == "single" ) {
-        
-        // 버튼 생성 이벤트
-        Frame.sectionBtnCreate( "single" );
+    // if( playType == "solo" ) {
+    //     // 버튼 생성 이벤트
+    // } else if ( playType == "duet" ) {
+    //     // 버튼 생성 이벤트
+    // }
 
-    } else if ( verseType == "multitude" ) {
+    // 구간 버튼 생성
+    Frame.sectionBtnCreate();
 
-        // 버튼 생성 이벤트
-        Frame.verseBtnCreate();
-
-    }
+    // 플레이 방식 버튼 이벤트 등록
+    Frame.playMethodBtnEventRegister();
 }
 
 // 플레이 방식 버튼 이벤트 등록
@@ -145,6 +128,7 @@ Frame.playMethodBtnEventRegister = function () {
         $(this).addClass("btn-primary");
         $(this).removeClass("btn-secondary");
 
+        $("#score").get(0).pause();
     });
 
     // MR 듣기
@@ -156,7 +140,6 @@ Frame.playMethodBtnEventRegister = function () {
         $(".btn-play").removeClass("btn-primary");
         $(this).addClass("btn-primary");
         $(this).removeClass("btn-secondary");
-
     });
 
     // 변형 AR 듣기
@@ -169,35 +152,13 @@ Frame.playMethodBtnEventRegister = function () {
         $(this).addClass("btn-primary");
         $(this).removeClass("btn-secondary");
 
+        $("#score").get(0).pause();
     });
 
     // 변형 MR 듣기
     $(document).on("click", ".btn-play-var-mr", function () {
 
         Frame.videoLoading( videoInfo.videoMrVarUrl );
-
-        $(".btn-play").addClass("btn-secondary");
-        $(".btn-play").removeClass("btn-primary");
-        $(this).addClass("btn-primary");
-        $(this).removeClass("btn-secondary");
-    });
-
-    // 변형 AR 듣기2
-    $(document).on("click", ".btn-play-var-ar2", function () {
-
-        Frame.videoLoading( videoInfo.videoArVarUrl2 );
-
-        $(".btn-play").addClass("btn-secondary");
-        $(".btn-play").removeClass("btn-primary");
-        $(this).addClass("btn-primary");
-        $(this).removeClass("btn-secondary");
-
-    });
-
-    // 변형 MR 듣기2
-    $(document).on("click", ".btn-play-var-mr2", function () {
-
-        Frame.videoLoading( videoInfo.videoMrVarUrl2 );
 
         $(".btn-play").addClass("btn-secondary");
         $(".btn-play").removeClass("btn-primary");
@@ -215,6 +176,7 @@ Frame.playMethodBtnEventRegister = function () {
         $(this).addClass("btn-primary");
         $(this).removeClass("btn-secondary");
 
+        $("#score").get(0).pause();
     });
 
     // 원어 MR 듣기
@@ -254,50 +216,31 @@ Frame.playMethodBtnEventRegister = function () {
 
 }
 
-// 절 버튼 생성
-Frame.verseBtnCreate = function () {
+// 구간 버튼 이벤트 등록
+Frame.sectionBtnEventRegister = function () {
 
-    let verseBtnArea = $("#verse-btn-area");
+    for (let i = 0; i<sectionCnt; i++) {
+        $(document).on("click", `#section-btn-area button[name='section${i+1}']`, function () {
+            $("#vd_score").get(0).currentTime = sectionTime[i];
+            $("#vd_score").attr("autoplay", "true");
+            $("#vd_score").get(0).play();
+            $(".section-btn").addClass("btn-secondary");
+            $(".section-btn").removeClass("btn-primary");
+            $(this).addClass("btn-primary");
+            $(this).removeClass("btn-secondary");
+        });
 
-    let htmlText = '';
-
-    verseBtnArea.empty();
-    for (let i = 0; i<verseCnt; i++) {
-        htmlText += `<button name="verse${i+1}" class="btn btn-secondary verse-btn" data-verse="${i}">${i+1}절</button>\n` 
     }
-
-    verseBtnArea.append(htmlText);
-
-    $("#verse-btn-area button[name='verse1']").removeClass("btn-secondary");
-    $("#verse-btn-area button[name='verse1']").addClass("btn-primary");
-
-    // 구간 버튼 생성
-    Frame.sectionBtnCreate ('multitude', 0);
-    Frame.playVerseBtnEventRegister();
-}
-
-// 절 선택 버튼 이벤트 등록
-Frame.playVerseBtnEventRegister = function () {
-
-    // 절 버튼
-    $(document).on("click", ".verse-btn", function () {
-        $(".verse-btn").addClass("btn-secondary");
-        $(".verse-btn").removeClass("btn-primary");
-        $(this).addClass("btn-primary");
-        $(this).removeClass("btn-secondary");
-
-        // 해당 절에 맞는 구간 버튼 생성
-        Frame.sectionBtnCreate( 'multitude', $(this).data('verse') );
-    });
-
 }
 
 // 구간 버튼 생성
-Frame.sectionBtnCreate = function ( type, verse ) {
+Frame.sectionBtnCreate = function (type) {
 
-// 단일 절인지, 다중 절인지 구분
-// 어느 절인지 확인
-// 어느 절의 구간이 몇개 있는지 확인
+    let sectionBtnArea = $("#section-btn-area");
+
+    let htmlText = '';
+
+    sectionBtnArea.empty();
 
     // 단일 절일 때
     if( type == 'single') {
@@ -307,35 +250,22 @@ Frame.sectionBtnCreate = function ( type, verse ) {
         sectionCnt = sectionTime[verse].length;
     }
 
-    let sectionBtnArea = $("#section-btn-area");
-    let htmlText = '';
-
-    sectionBtnArea.empty();
-    for (let i = 0; i < sectionCnt; i++) {
-        htmlText += `<button name="section${i+1}" class="btn btn-secondary section-btn">${i+1}</button>\n`
+    for (let i = 0; i<sectionCnt; i++) {
+        htmlText += `<button name="section${i+1}" class="btn btn-secondary section-btn">${i+1}</button>\n` 
     }
 
     sectionBtnArea.append(htmlText);
 
     // 구간 버튼 이벤트 등록
-    Frame.sectionBtnEventRegister(type, verse);
-
+    Frame.sectionBtnEventRegister();
 }
 
 // 구간 버튼 이벤트 등록
-Frame.sectionBtnEventRegister = function ( type, verse ) {
+Frame.sectionBtnEventRegister = function () {
 
-    for (let i = 0; i < sectionCnt; i++) {
-        $(document).off("click", `#section-btn-area button[name='section${i+1}']`);
-    }
-
-    for (let i = 0; i < sectionCnt; i++) {
+    for (let i = 0; i<sectionCnt; i++) {
         $(document).on("click", `#section-btn-area button[name='section${i+1}']`, function () {
-            if (type == 'single') { // 단일 절일 때
-                $("#vd_score").get(0).currentTime = sectionTime[i];
-            } else if (type == 'multitude') { // 다중 절일 때
-                $("#vd_score").get(0).currentTime = sectionTime[verse][i];
-            }
+            $("#vd_score").get(0).currentTime = sectionTime[i];
             $("#vd_score").attr("autoplay", "true");
             $("#vd_score").get(0).play();
             $(".section-btn").addClass("btn-secondary");
@@ -343,8 +273,11 @@ Frame.sectionBtnEventRegister = function ( type, verse ) {
             $(this).addClass("btn-primary");
             $(this).removeClass("btn-secondary");
         });
+
     }
 }
+
+
 
 // 카운트 다운 효과 개발 예정
 Frame.countDown = function () {
