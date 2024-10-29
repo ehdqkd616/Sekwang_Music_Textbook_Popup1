@@ -50,7 +50,7 @@ Frame.videoLoading = function ( url ) {
     Frame.playTypeSetting(videoInfo.playType);
 
     // 볼륨 컨트롤
-    $("#vd_score").get(0).volume = 0.1;
+    // $("#vd_score").get(0).volume = 0.1;
 
     // 구간 버튼 초기화
     $(".section-btn").addClass("btn-secondary");
@@ -64,51 +64,64 @@ Frame.playTypeSetting = function ( playType ) {
     $(".play-select .btn-play").removeClass("onShow");
 
     switch (playType) {
-        case 'single':
+        case 'single': // Only AR
             $(".play-select .btn-play-ar").addClass("onShow");
             break;
-        case 'solo':
+        case 'solo': // 단성부
             $(".play-select .btn-play-ar").addClass("onShow");
             $(".play-select .btn-play-mr").addClass("onShow");
             break;
-        case 'polyphony': 
+        case 'polyphony': // 다성부
             $(".play-select .btn-play-ar").addClass("onShow");
             $(".play-select .btn-play-mr").addClass("onShow");
             $(".play-select .btn-play-ar-first").addClass("onShow");
             $(".play-select .btn-play-ar-second").addClass("onShow");
             break;
-        case 'multilingual': 
+        case 'polyphony2': // 다성부
+            $(".play-select .btn-play-ar").addClass("onShow");
+            $(".play-select .btn-play-mr").addClass("onShow");
+            $(".play-select .btn-play-ar-male").addClass("onShow");
+            $(".play-select .btn-play-ar-female").addClass("onShow");
+            break;
+        case 'multilingual': // 다국어
             $(".play-select .btn-play-ar").addClass("onShow");
             $(".play-select .btn-play-mr").addClass("onShow");
             $(".play-select .btn-play-original-ar").addClass("onShow");
-            $(".play-select .btn-play-original-mr").addClass("onShow");
             break;
-        case 'multilingual2': 
+        case 'multilingual_polyphony': // 다국어, 다성부
             $(".play-select .btn-play-ar").addClass("onShow");
             $(".play-select .btn-play-mr").addClass("onShow");
             $(".play-select .btn-play-original-ar").addClass("onShow");
+            $(".play-select2 .btn-play-ar-first2").addClass("onShow");
+            $(".play-select2 .btn-play-ar-second2").addClass("onShow");
+            $(".play-select2 .btn-play-original-ar-first").addClass("onShow");
+            $(".play-select2 .btn-play-original-ar-second").addClass("onShow");
             break;
-        case 'multilingual2_polyphony': 
-            $(".play-select .btn-play-ar").addClass("onShow");
-            $(".play-select .btn-play-mr").addClass("onShow");
-            $(".play-select .btn-play-original-ar").addClass("onShow");
-            $(".play-select .btn-play-original-mr").addClass("onShow");
-            $(".play-select .btn-play-ar-first").addClass("onShow");
-            $(".play-select .btn-play-ar-second").addClass("onShow");
-            break;
-        case 'variation':
+        case 'variation': // 변형1
             $(".play-select .btn-play-ar").addClass("onShow");
             $(".play-select .btn-play-mr").addClass("onShow");
             $(".play-select .btn-play-var-ar").addClass("onShow");
             $(".play-select .btn-play-var-mr").addClass("onShow");
             break;
-        case 'variation2':
+        case 'variation2': // 변형2
             $(".play-select .btn-play-ar").addClass("onShow");
             $(".play-select .btn-play-mr").addClass("onShow");
-            $(".play-select .btn-play-var-ar").addClass("onShow");
-            $(".play-select .btn-play-var-mr").addClass("onShow");
-            $(".play-select .btn-play-var-ar2").addClass("onShow");
-            $(".play-select .btn-play-var-mr2").addClass("onShow");
+            $(".play-select2 .btn-play-var-ar1").addClass("onShow");
+            $(".play-select2 .btn-play-var-mr1").addClass("onShow");
+            $(".play-select2 .btn-play-var-ar2").addClass("onShow");
+            $(".play-select2 .btn-play-var-mr2").addClass("onShow");
+            break;
+        case 'recorder': // 리코더1, 리코더2
+            $(".play-select .btn-play-ar").addClass("onShow");
+            $(".play-select .btn-play-ar-recorder1").addClass("onShow");
+            $(".play-select .btn-play-ar-recorder2").addClass("onShow");
+            break;   
+        case 'ensemble1': // 합주1 - 리코더1, 리코더2, 칼림바, 피아노
+            $(".play-select .btn-play-ar").addClass("onShow");
+            $(".play-select2 .btn-play-ar-recorder2-1").addClass("onShow");
+            $(".play-select2 .btn-play-ar-recorder2-2").addClass("onShow");
+            $(".play-select2 .btn-play-ar-kalimba").addClass("onShow");
+            $(".play-select2 .btn-play-ar-piano").addClass("onShow");
             break;
     }
 
@@ -182,6 +195,29 @@ Frame.playMethodBtnEventRegister = function () {
         $(this).removeClass("btn-secondary");
     });
 
+    // 변형 AR 듣기1
+    $(document).on("click", ".btn-play-var-ar1", function () {
+
+        Frame.videoLoading( videoInfo.videoArVarUrl );
+
+        $(".btn-play").addClass("btn-secondary");
+        $(".btn-play").removeClass("btn-primary");
+        $(this).addClass("btn-primary");
+        $(this).removeClass("btn-secondary");
+
+    });
+
+    // 변형 MR 듣기1
+    $(document).on("click", ".btn-play-var-mr1", function () {
+
+        Frame.videoLoading( videoInfo.videoMrVarUrl );
+
+        $(".btn-play").addClass("btn-secondary");
+        $(".btn-play").removeClass("btn-primary");
+        $(this).addClass("btn-primary");
+        $(this).removeClass("btn-secondary");
+    });
+
     // 변형 AR 듣기2
     $(document).on("click", ".btn-play-var-ar2", function () {
 
@@ -217,17 +253,6 @@ Frame.playMethodBtnEventRegister = function () {
 
     });
 
-    // 원어 MR 듣기
-    $(document).on("click", ".btn-play-original-mr", function () {
-
-        Frame.videoLoading( videoInfo.videoMrOriginalUrl );
-
-        $(".btn-play").addClass("btn-secondary");
-        $(".btn-play").removeClass("btn-primary");
-        $(this).addClass("btn-primary");
-        $(this).removeClass("btn-secondary");
-    });
-
     // 1성부 듣기
     $(document).on("click", ".btn-play-ar-first", function () {
 
@@ -244,6 +269,151 @@ Frame.playMethodBtnEventRegister = function () {
     $(document).on("click", ".btn-play-ar-second", function () {
 
         Frame.videoLoading( videoInfo.videoArSecondUrl );
+
+        $(".btn-play").addClass("btn-secondary");
+        $(".btn-play").removeClass("btn-primary");
+        $(this).addClass("btn-primary");
+        $(this).removeClass("btn-secondary");
+
+    });
+
+    // 1성부 듣기2
+    $(document).on("click", ".btn-play-ar-first2", function () {
+
+        Frame.videoLoading( videoInfo.videoArFirstUrl );
+
+        $(".btn-play").addClass("btn-secondary");
+        $(".btn-play").removeClass("btn-primary");
+        $(this).addClass("btn-primary");
+        $(this).removeClass("btn-secondary");
+
+    });
+
+    // 2성부 듣기2
+    $(document).on("click", ".btn-play-ar-second2", function () {
+
+        Frame.videoLoading( videoInfo.videoArSecondUrl );
+
+        $(".btn-play").addClass("btn-secondary");
+        $(".btn-play").removeClass("btn-primary");
+        $(this).addClass("btn-primary");
+        $(this).removeClass("btn-secondary");
+
+    });
+
+
+    // 원어 1성부 듣기
+    $(document).on("click", ".btn-play-original-ar-first", function () {
+
+        Frame.videoLoading( videoInfo.videoArOriFirstUrl );
+
+        $(".btn-play").addClass("btn-secondary");
+        $(".btn-play").removeClass("btn-primary");
+        $(this).addClass("btn-primary");
+        $(this).removeClass("btn-secondary");
+
+    });
+
+    // 원어 2성부 듣기
+    $(document).on("click", ".btn-play-original-ar-second", function () {
+
+        Frame.videoLoading( videoInfo.videoArOriSecondUrl );
+
+        $(".btn-play").addClass("btn-secondary");
+        $(".btn-play").removeClass("btn-primary");
+        $(this).addClass("btn-primary");
+        $(this).removeClass("btn-secondary");
+
+    });
+
+    // 리코더1 듣기
+    $(document).on("click", ".btn-play-ar-recorder1", function () {
+
+        Frame.videoLoading( videoInfo.videoArRecorder1 );
+
+        $(".btn-play").addClass("btn-secondary");
+        $(".btn-play").removeClass("btn-primary");
+        $(this).addClass("btn-primary");
+        $(this).removeClass("btn-secondary");
+
+    });
+    
+    // 리코더2 듣기
+    $(document).on("click", ".btn-play-ar-recorder2", function () {
+
+        Frame.videoLoading( videoInfo.videoArRecorder2 );
+
+        $(".btn-play").addClass("btn-secondary");
+        $(".btn-play").removeClass("btn-primary");
+        $(this).addClass("btn-primary");
+        $(this).removeClass("btn-secondary");
+
+    });
+    
+    // 리코더1 듣기2
+    $(document).on("click", ".btn-play-ar-recorder2-1", function () {
+
+        Frame.videoLoading( videoInfo.videoArRecorder1 );
+
+        $(".btn-play").addClass("btn-secondary");
+        $(".btn-play").removeClass("btn-primary");
+        $(this).addClass("btn-primary");
+        $(this).removeClass("btn-secondary");
+
+    });
+    
+    // 리코더2 듣기2
+    $(document).on("click", ".btn-play-ar-recorder2-2", function () {
+
+        Frame.videoLoading( videoInfo.videoArRecorder2 );
+
+        $(".btn-play").addClass("btn-secondary");
+        $(".btn-play").removeClass("btn-primary");
+        $(this).addClass("btn-primary");
+        $(this).removeClass("btn-secondary");
+
+    });
+    
+    // 칼림바 듣기
+    $(document).on("click", ".btn-play-ar-kalimba", function () {
+
+        Frame.videoLoading( videoInfo.videoArKalimba );
+
+        $(".btn-play").addClass("btn-secondary");
+        $(".btn-play").removeClass("btn-primary");
+        $(this).addClass("btn-primary");
+        $(this).removeClass("btn-secondary");
+
+    });
+    
+    // 피아노 듣기
+    $(document).on("click", ".btn-play-ar-piano", function () {
+
+        Frame.videoLoading( videoInfo.videoArPiano );
+
+        $(".btn-play").addClass("btn-secondary");
+        $(".btn-play").removeClass("btn-primary");
+        $(this).addClass("btn-primary");
+        $(this).removeClass("btn-secondary");
+
+    });
+
+    // 남성 듣기
+    $(document).on("click", ".btn-play-ar-male", function () {
+
+        Frame.videoLoading( videoInfo.videoArMaleUrl );
+
+        $(".btn-play").addClass("btn-secondary");
+        $(".btn-play").removeClass("btn-primary");
+        $(this).addClass("btn-primary");
+        $(this).removeClass("btn-secondary");
+
+    });
+
+    // 여성 듣기
+    $(document).on("click", ".btn-play-ar-female", function () {
+
+        Frame.videoLoading( videoInfo.videoArFemaleUrl );
 
         $(".btn-play").addClass("btn-secondary");
         $(".btn-play").removeClass("btn-primary");

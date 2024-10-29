@@ -4,6 +4,11 @@
     margin: 20px 0px 20px 0px;
 }
 
+.play-select2{
+    margin-top: 6px;
+}
+
+
 .btn-play {
     display: none;
 }

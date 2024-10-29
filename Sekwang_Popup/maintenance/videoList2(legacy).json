@@ -31,7 +31,7 @@ videoList = {
     {
         "videoArUrl" : "video/중2_QR1/중2_QR1_1-3_꽃의계절_AR.mp4",
         "videoMrUrl" : "video/중2_QR1/중2_QR1_1-3_꽃의계절_MR.mp4",
-        "playType" : "solo",
+        "playType" : "polyphony",
         "verseType" : "multitude",
         "sectionTime" : [[12.5, 25.5, 39, 48.5],   [56.3, 64]]
     },
@@ -78,7 +78,7 @@ videoList = {
         "videoArSecondUrl" : "video/중2_QR1/중2_QR1_1-8_산타루치아_AR_KOR_하성부.mp4",
         "videoArOriFirstUrl" : "video/중2_QR1/중2_QR1_1-8_산타루치아_AR_ITL_상성부.mp4",
         "videoArOriSecondUrl" : "video/중2_QR1/중2_QR1_1-8_산타루치아_AR_ITL_하성부.mp4",
-        "playType" : "multilingual_polyphony",
+        "playType" : "multilingual2_polyphony",
         "verseType" : "multitude",
         "sectionTime" : [[9, 18.5, 46.3, 55.3], [27.8, 37.2, 64.8, 73.8]]
     },
@@ -106,7 +106,7 @@ videoList = {
         "videoMrUrl" : "video/중2_QR1/중2_QR1_1-11_북촌이맑다커늘_MR.mp4",
         "videoArFirstUrl" : "video/중2_QR1/중2_QR1_1-11_북촌이맑다커늘_AR_윗성부.mp4",
         "videoArSecondUrl" : "video/중2_QR1/중2_QR1_1-11_북촌이맑다커늘_AR_아랫성부.mp4",
-        "playType" : "polyphony",
+        "playType" : "solo",
         "verseType" : "single",
         "sectionTime" : [17.5, 25.5, 34, 42, 50.5, 58.8]
     },
@@ -165,7 +165,7 @@ videoList = {
         "videoMrVarUrl2" : "video/중2_QR2/중2_QR2_2-6_통영개타령_변형2_MR.mp4",
         "playType" : "variation2",
         "verseType" : "single",
-        "sectionTime" : [4.5, 8.8, 13.2, 17.5, 24.2, 28.6, 32.8]
+        "sectionTime" : [4.5, 8.8, 13.2, 17.5, 21.8, 26.4, 30.7]
     },
     "QR2_2-7":
     {
@@ -182,11 +182,9 @@ videoList = {
     {
         "videoArUrl" : "video/중2_QR3/중2_QR3_3-1_오랜날오랜밤_AR.mp4",
         "videoMrUrl" : "video/중2_QR3/중2_QR3_3-1_오랜날오랜밤_MR.mp4",
-        "videoArMaleUrl" : "video/중2_QR3/중2_QR3_3-1_오랜날오랜밤_AR_남성.mp4",
-        "videoArFemaleUrl" : "video/중2_QR3/중2_QR3_3-1_오랜날오랜밤_AR_여성.mp4",
-        "playType" : "polyphony2",
+        "playType" : "solo",
         "verseType" : "single",
-        "sectionTime" : [18, 27.5, 36, 45.5, 54.5, 64.5, 75, 84, 91.3, 100.2]
+        "sectionTime" : [18, 27.5, 36, 45.5, 54.5, 62, 75, 84, 91.3, 100.2]
     },
     "QR3_3-2":
     {
@@ -208,9 +206,7 @@ videoList = {
     {
         "videoArUrl" : "video/중2_QR3/중2_QR3_3-4_국가대표_AR.mp4",
         "videoMrUrl" : "video/중2_QR3/중2_QR3_3-4_국가대표_MR.mp4",
-        "videoArMaleUrl" : "video/중2_QR3/중2_QR3_3-4_국가대표_AR_남성.mp4",
-        "videoArFemaleUrl" : "video/중2_QR3/중2_QR3_3-4_국가대표_AR_여성.mp4",
-        "playType" : "polyphony2",
+        "playType" : "polyphony",
         "verseType" : "multitude",
         "sectionTime" : [[17.8, 26.8, 35.4, 43.9, 53, 61.5, 69, 78.5], [99.3, 107.8, 116.5, 125.5, 134, 143, 150.5, 160]]
     },
@@ -218,9 +214,7 @@ videoList = {
     {
         "videoArUrl" : "video/중2_QR3/중2_QR3_3-5_미리메리크리스마스_AR.mp4",
         "videoMrUrl" : "video/중2_QR3/중2_QR3_3-5_미리메리크리스마스_MR.mp4",
-        "videoArMaleUrl" : "video/중2_QR3/중2_QR3_3-5_미리메리크리스마스_AR_남성.mp4",
-        "videoArFemaleUrl" : "video/중2_QR3/중2_QR3_3-5_미리메리크리스마스_AR_여성.mp4",
-        "playType" : "polyphony2",
+        "playType" : "solo",
         "verseType" : "single",
         "sectionTime" : [8, 17, 28.8, 36.5, 44.8, 52.5, 59.8, 67.4]
     },
@@ -232,9 +226,9 @@ videoList = {
         "videoArUrl" : "video/중2_QR4/중2_QR4_4-1_여자의마음_KOR.mp4",
         "videoMrUrl" : "video/중2_QR4/중2_QR4_4-1_여자의마음_MR.mp4",
         "videoArOriginalUrl" : "video/중2_QR4/중2_QR4_4-1_여자의마음_ITL.mp4",
-        "playType" : "multilingual",
+        "playType" : "multilingual2",
         "verseType" : "single",
-        "sectionTime" : [2.5, 7.6, 13, 18, 23, 28.4]
+        "sectionTime" : [2.5, 13, 23, 28.4]
     },
     "QR4_4-2":
     {
@@ -250,7 +244,7 @@ videoList = {
         "videoMrUrl" : "video/중2_QR4/중2_QR4_4-3_myfavoritething_MR.mp4",
         "playType" : "solo",
         "verseType" : "multitude",
-        "sectionTime" : [[4.3, 8.9, 13.3, 18], [22.3, 26.9, 31.3, 35.7]]
+        "sectionTime" : [[4.3, 13.3], [22.3, 31.3, 40.6, 49]]
     },
     "QR4_4-4":
     {
@@ -277,11 +271,7 @@ videoList = {
         "videoArUrl" : "video/중2_QR5/중2_QR5_5-1_내가탄마차는_KOR.mp4",
         "videoMrUrl" : "video/중2_QR5/중2_QR5_5-1_내가탄마차는_MR.mp4",
         "videoArOriginalUrl" : "video/중2_QR5/중2_QR5_5-1_내가탄마차는_ENG.mp4",
-        "videoArFirstUrl" : "video/중2_QR5/중2_QR5_5-1_내가탄마차는_AR_KOR_상성부.mp4",
-        "videoArSecondUrl" : "video/중2_QR5/중2_QR5_5-1_내가탄마차는_AR_KOR_하성부.mp4",
-        "videoArOriFirstUrl" : "video/중2_QR5/중2_QR5_5-1_내가탄마차는_AR_ENG_상성부.mp4",
-        "videoArOriSecondUrl" : "video/중2_QR5/중2_QR5_5-1_내가탄마차는_AR_ENG_하성부.mp4",
-        "playType" : "multilingual_polyphony",
+        "playType" : "multilingual2",
         "verseType" : "single",
         "sectionTime" : [9.8, 19.5, 28.7, 38.7, 49, 58.6]
     },
@@ -290,7 +280,7 @@ videoList = {
         "videoArUrl" : "video/중2_QR5/중2_QR5_5-2_라쿠카라차_KOR.mp4",
         "videoMrUrl" : "video/중2_QR5/중2_QR5_5-2_라쿠카라차_MR.mp4",
         "videoArOriginalUrl" : "video/중2_QR5/중2_QR5_5-2_라쿠카라차_ESP.mp4",
-        "playType" : "multilingual",
+        "playType" : "multilingual2",
         "verseType" : "single",
         "sectionTime" : [2.5, 7.8, 13.2, 18.4, 23, 28.4, 33.6, 39]
     },
@@ -298,12 +288,8 @@ videoList = {
     {
         "videoArUrl" : "video/중2_QR5/중2_QR5_5-3_연가_KOR.mp4",
         "videoMrUrl" : "video/중2_QR5/중2_QR5_5-3_연가_MR.mp4",
-        "videoArOriginalUrl" : "video/중2_QR5/중2_QR5_5-3_연가_NEW.mp4",
-        "videoArFirstUrl" : "video/중2_QR5/중2_QR5_5-3_연가_AR_KOR_상성부.mp4",
-        "videoArSecondUrl" : "video/중2_QR5/중2_QR5_5-3_연가_AR_KOR_하성부.mp4",
-        "videoArOriFirstUrl" : "video/중2_QR5/중2_QR5_5-3_연가_AR_NEW_상성부.mp4",
-        "videoArOriSecondUrl" : "video/중2_QR5/중2_QR5_5-3_연가_AR_NEW_하성부.mp4",
-        "playType" : "multilingual_polyphony",
+        "videoArOriginalUrl" : "video/중2_QR5/중2_QR5_5-3_연가_KOR.mp4",
+        "playType" : "multilingual2",
         "verseType" : "single",
         "sectionTime" : [9.6, 19.6, 29, 38.8, 48.5, 57.5, 67.2, 77]
     },
@@ -312,7 +298,7 @@ videoList = {
         "videoArUrl" : "video/중2_QR5/중2_QR5_5-4_월칭마틸다_KOR.mp4",
         "videoMrUrl" : "video/중2_QR5/중2_QR5_5-4_월칭마틸다_MR.mp4",
         "videoArOriginalUrl" : "video/중2_QR5/중2_QR5_5-4_월칭마틸다_ENG.mp4",
-        "playType" : "multilingual",
+        "playType" : "multilingual2",
         "verseType" : "single",
         "sectionTime" : [8, 15.5, 24, 31.5]
     },
@@ -330,7 +316,7 @@ videoList = {
         "videoMrUrl" : "video/중2_QR5/중2_QR5_5-6_피크닉의노래_MR.mp4",
         "playType" : "solo",
         "verseType" : "single",
-        "sectionTime" : [9, 18, 26.4, 36, 44.3]
+        "sectionTime" : [9, 18, 27, 36, 44.3]
     },
     "QR5_5-7":
     {
@@ -361,9 +347,7 @@ videoList = {
     {
         "videoArUrl" : "video/중2_QR6/중2_QR6_1-2_사랑은길들지않는새_AR.mp4",
         "videoMrUrl" : "video/중2_QR6/중2_QR6_1-2_사랑은길들지않는새_MR.mp4",
-        "videoArRecorder1" : "video/중2_QR6/중2_QR6_1-2_사랑은길들지않는새_1.mp4",
-        "videoArRecorder2" : "video/중2_QR6/중2_QR6_1-2_사랑은길들지않는새_2.mp4",
-        "playType" : "recorder",
+        "playType" : "solo",
         "verseType" : "single",
         "sectionTime" : [0, 6, 13.5, 22.8, 30]
     },
@@ -429,7 +413,7 @@ videoList = {
         "videoArUrl" : "video/중2_QR6/중2_QR6_5-2_진도아리랑.mp4",
         "playType" : "single",
         "verseType" : "single",
-        "sectionTime" : [0, 8.4]
+        "sectionTime" : []
     },
 
     "QR6_6":
