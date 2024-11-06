@@ -4,10 +4,22 @@
     margin: 20px 0px 20px 0px;
 }
 
-.play-select2{
+.play-select {
+    text-align: left;
+}
+
+.play-select2 {
     margin-top: 6px;
 }
 
+.verse-btn-area{
+    flex-grow: 0.5;
+}
+
+.section-btn-area {
+    text-align: right;
+    /* display: flex; */
+}
 
 .btn-play {
     display: none;

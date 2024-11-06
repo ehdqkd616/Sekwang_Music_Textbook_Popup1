@@ -12,8 +12,8 @@ videoList = {
         "videoArUrl" : "video/중1_QR0/중1_QR1_0-2_음악의기초 (그래그래서)_ar.mp4",
         "videoMrUrl" : "video/중1_QR0/중1_QR1_0-2_음악의기초 (그래그래서)_mr.mp4",
         "playType" : "solo",
-        "verseType" : "single",
-        "sectionTime" : [4.7, 9.5, 14.3, 19.2]
+        "verseType" : "multitude",
+        "sectionTime" : [[4.7, 9.5, 14.3, 19.2], [24, 28.8, 33.4, 38.3]]
     },
     "QR1_0-3":
     {
@@ -59,7 +59,7 @@ videoList = {
         "videoMrUrl" : "video/중1_QR1/중1_QR1_1-3_행진_mr.mp4",
         "playType" : "solo",
         "verseType" : "single",
-        "sectionTime" : [8, 25.6, 42.8]
+        "sectionTime" : [8, 16, 25.6, 33.3, 42.8, 51.5, 59.9, 67.6]
     },
     "QR1_1-4":
     {
@@ -94,8 +94,9 @@ videoList = {
         "videoArVarUrl" : "video/중1_QR1/중1_QR1_1-7_아름다운 나라_변형_ar.mp4",
         "videoMrVarUrl" : "video/중1_QR1/중1_QR1_1-7_아름다운 나라_변형_mr.mp4",
         "playType" : "variation",
-        "verseType" : "multitude",
-        "sectionTime" : [[26, 34.5, 59.3, 67.4, 75.8, 84], [42.5, 51, 59.3, 67.4, 92.2, 100.6]]
+        "verseType" : "single",
+        "sectionTime" : [26, 34.5, 42.5, 51, 59.3, 67.4, 75.8, 84, 92.2, 100.6],
+        "_sectionTime" : [[26, 34.5, 59.3, 67.4, 75.8, 84], [42.5, 51, 59.3, 67.4, 92.2, 100.6]]
     },
     "QR1_1-8":
     {
@@ -124,8 +125,9 @@ videoList = {
         "videoArFirstUrl" : "video/중1_QR1/중1_QR1_1-10_사냥꾼의 합창_상_ar.mp4",
         "videoArSecondUrl" : "video/중1_QR1/중1_QR1_1-10_사냥꾼의 합창_하_ar.mp4",
         "playType" : "polyphony",
-        "verseType" : "multitude",
-        "sectionTime" : [[10.5, 16, 32, 37.5, 42.5, 48], [21.5, 26.8, 32, 37.5, 42.5, 48]]
+        "verseType" : "single",
+        "sectionTime" : [10.5, 16, 21.5, 26.8, 32, 37.5, 42.5, 48],
+        "_sectionTime" : [[10.5, 16, 32, 37.5, 42.5, 48], [21.5, 26.8, 32, 37.5, 42.5, 48]]
     },
 
 
@@ -165,7 +167,7 @@ videoList = {
         "videoMrUrl" : "video/중1_QR2/중1_QR2_2-4_금다래꿍_mr.mp4",
         "playType" : "solo",
         "verseType" : "multitude",
-        "sectionTime" : [[10, 15, 20, 25], [29.7, 34.7, 39.7, 44.7], [49.5, 54.5, 59.5, 64.5]]
+        "sectionTime" : [[10, 15, 20, 25], [29.7, 34.7, 39.7, 44.7], [49.5, 54.5, 59.5, 64.5, 69.2, 74.2]]
     },
     "QR2_2-5":
     {
@@ -202,7 +204,7 @@ videoList = {
         "videoArSecondUrl" : "video/중1_QR3/중1_QR3_3-2_염소 4만 원_하_ar.mp4",
         "playType" : "polyphony",
         "verseType" : "single",
-        "sectionTime" : [7, 14.8, 22.2, 30, 37.5, 46.8, 52.3, 60, 67.5]
+        "sectionTime" : [7, 14.8, 22.2, 30, 37.5, 44.8, 52.3, 60]
     },
     "QR3_3-3":
     {
@@ -215,7 +217,7 @@ videoList = {
         "videoArOriSecondUrl" : "video/중1_QR3/중1_QR3_3-3_하쿠나 마타타_원어_멜로디_ar.mp4",
         "playType" : "multilingual_polyphony",
         "verseType" : "single",
-        "sectionTime" : [8, 12, 18, 30, 36, 42.5, 48.5, 52]
+        "sectionTime" : [8, 12, 18, 30, 36, 42.5, 48.5]
     },
     "QR3_3-4":
     {
@@ -274,7 +276,7 @@ videoList = {
         "videoArOriginalUrl" : "video/중1_QR4/중1_QR4_4-4_I have a dream_원어_ar.mp4",
         "playType" : "multilingual",
         "verseType" : "single",
-        "sectionTime" : [13, 32, 50.8, 68.8]
+        "sectionTime" : [13, 32, 50.8, 60, 68.8, 77.6]
     },
     "QR4_4-5":
     {
@@ -377,19 +379,21 @@ videoList = {
 
     "QR6_2-1":
     {
-        "videoArUrl" : "video/중1_QR6/중1_QR6_2-1_젓가락 행진곡_ar(붐웨커는 모션x).mp4",
-        "videoMrUrl" : "video/중1_QR6/중1_QR6_2-1_젓가락 행진곡_mr(붐웨커는 모션x).mp4",
-        "playType" : "solo",
-        "verseType" : "single",
-        "sectionTime" : [4.8, 10.4, 15.5, 20.5]
-    },
-    "QR6_2-2":
-    {
         "videoArUrl" : "video/중1_QR6/중1_QR6_2-1_학교종_ar(붐웨커는 모션x).mp4",
         "videoMrUrl" : "video/중1_QR6/중1_QR6_2-1_학교종_mr(붐웨커는 모션x).mp4",
         "playType" : "solo",
         "verseType" : "single",
-        "sectionTime" : [8.5, 17.5]
+        "sectionTime" : [],
+        "_sectionTime" : [4.8, 10.4, 15.5, 20.5]
+    },
+    "QR6_2-2":
+    {
+        "videoArUrl" : "video/중1_QR6/중1_QR6_2-1_젓가락 행진곡_ar(붐웨커는 모션x).mp4",
+        "videoMrUrl" : "video/중1_QR6/중1_QR6_2-1_젓가락 행진곡_mr(붐웨커는 모션x).mp4",
+        "playType" : "solo",
+        "verseType" : "single",
+        "sectionTime" : [],
+        "_sectionTime" : [8.5, 17.5]
     },
     "QR6_2-3":
     {

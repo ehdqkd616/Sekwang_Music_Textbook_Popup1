@@ -23,8 +23,9 @@ videoList = {
         "videoArFirstUrl" : "video/중2_QR1/중2_QR1_1-2_뭉게구름_AR_상성부.mp4",
         "videoArSecondUrl" : "video/중2_QR1/중2_QR1_1-2_뭉게구름_AR_하성부.mp4",
         "playType" : "polyphony",
-        "verseType" : "multitude",
-        "sectionTime" : [[8.5, 17.5], [26, 35, 43.7, 52.5]]
+        "verseType" : "single",
+        "sectionTime" : [8.5, 17.5, 26, 35, 43.7, 52.5],
+        "_sectionTime" : [[8.5, 17.5], [26, 35, 43.7, 52.5]]
 
     },
     "QR1_1-3":
@@ -49,7 +50,7 @@ videoList = {
         "videoMrUrl" : "video/중2_QR1/중2_QR1_1-5_남촌_MR.mp4",
         "videoArFirstUrl" : "video/중2_QR1/중2_QR1_1-5_남촌_AR_상성부.mp4",
         "videoArSecondUrl" : "video/중2_QR1/중2_QR1_1-5_남촌_AR_하성부.mp4",
-        "playType" : "polyphony",
+        "playType" : "polyphony_multitude",
         "verseType" : "multitude",
         "sectionTime" : [[25.5, 38, 52.5, 63, 76.5, 88.8], [102, 114.5, 129, 139.5, 153, 165.3]]
     },
@@ -220,7 +221,7 @@ videoList = {
         "videoMrUrl" : "video/중2_QR3/중2_QR3_3-5_미리메리크리스마스_MR.mp4",
         "videoArMaleUrl" : "video/중2_QR3/중2_QR3_3-5_미리메리크리스마스_AR_남성.mp4",
         "videoArFemaleUrl" : "video/중2_QR3/중2_QR3_3-5_미리메리크리스마스_AR_여성.mp4",
-        "playType" : "polyphony2",
+        "playType" : "solo",
         "verseType" : "single",
         "sectionTime" : [8, 17, 28.8, 36.5, 44.8, 52.5, 59.8, 67.4]
     },
@@ -249,8 +250,9 @@ videoList = {
         "videoArUrl" : "video/중2_QR4/중2_QR4_4-3_myfavoritething_AR.mp4",
         "videoMrUrl" : "video/중2_QR4/중2_QR4_4-3_myfavoritething_MR.mp4",
         "playType" : "solo",
-        "verseType" : "multitude",
-        "sectionTime" : [[4.3, 8.9, 13.3, 18], [22.3, 26.9, 31.3, 35.7]]
+        "verseType" : "single",
+        "sectionTime" : [4.3, 13.3, 22.3, 31.3, 40.5, 49, 53.6],
+        "_sectionTime" : [[4.3, 8.9, 13.3, 18], [22.3, 26.9, 31.3, 35.7]]
     },
     "QR4_4-4":
     {
@@ -370,18 +372,31 @@ videoList = {
 
     "QR6_2":
     {
-        "videoArUrl" : "video/중2_QR6/중2_QR6_2_반주유형1.mp4",
-        "videoMrUrl" : "video/중2_QR6/중2_QR6_2_반주유형2.mp4",
-        "videoArVarUrl" : "video/중2_QR6/중2_QR6_2_코드와구성음.mp4",
-        "playType" : "solo",
+        "videoArAccompanimentUrl1" : "video/중2_QR6/중2_QR6_2_반주유형1.mp4",
+        "videoArAccompanimentUrl2" : "video/중2_QR6/중2_QR6_2_반주유형2.mp4",
+        "playType" : "accompaniment",
         "verseType" : "single",
         "sectionTime" : []
     },
+    "QR6__2":
+    {
+        "videoArUrl" : "video/중2_QR6/중2_QR6_2_코드와구성음.mp4",
+        "playType" : "name_single",
+        "verseType" : "name_single",
+        "sectionTime" : [0.3, 3.8, 6.8, 9.8, 12.8, 15.8],
+        "sectionName" : ["C", "D7", "G", "G7", "Dm", "A"],
+    },
     "QR6_2-1":
     {
+        "videoArUrl" : "video/중2_QR6/중2_QR6_2-1_비창소나타실력다지기.mp4",
+        "playType" : "single",
+        "verseType" : "single",
+        "sectionTime" : []
+    },
+    "QR6_2-2":
+    {
         "videoArUrl" : "video/중2_QR6/중2_QR6_2-1_비창소나타뽐내기.mp4",
-        "videoMrUrl" : "video/중2_QR6/중2_QR6_2-1_비창소나타실력다지기.mp4",
-        "playType" : "solo",
+        "playType" : "single",
         "verseType" : "single",
         "sectionTime" : []
     },
@@ -404,9 +419,10 @@ videoList = {
     "QR6_4-1":
     {
         "videoArUrl" : "video/중2_QR6/중2_QR6_4-1_기타코드.mp4",
-        "playType" : "single",
-        "verseType" : "single",
-        "sectionTime" : [0, 5, 10.5, 15.5, 21.2, 27.2, 33.5]
+        "playType" : "name_single",
+        "verseType" : "name_single",
+        "sectionTime" : [0, 5, 10.5, 15.5, 21.2, 27.2, 33.5],
+        "sectionName" : ["G", "Am", "D7", "Em", "C", "Bm", "A"]
     },
     "QR6_4-2":
     {
@@ -652,9 +668,10 @@ videoList = {
     "QR11_1":
     {
         "videoArUrl" : "video/중2_QR11/106쪽_작은 별 변주곡.mp4",
-        "playType" : "single",
-        "verseType" : "single",
-        "sectionTime" : []
+        "playType" : "name_single",
+        "verseType" : "name_single",
+        "sectionTime" : [0, 17.5, 33, 84, 108],
+        "sectionName" : ["주제 선율", "가락 변주", "리듬 변주", "박자 변주", "조성 변주"]
     },
 
 

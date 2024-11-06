@@ -13,12 +13,6 @@ let sectionTime = videoInfo["sectionTime"];
 let verseCnt = sectionTime.length;
 let sectionCnt = sectionTime.length;
 
-// console.log(`urlParams : ${urlParams}`);
-// console.log(`videoUrl : ${videoUrl}`);
-// console.log(`videoInfo : ${videoInfo.videoArUrl}`);
-// console.log(`sectionTime: ${sectionTime}`);
-// console.log(`sectionCnt: ${sectionCnt}`);
-
 $(document).ready(function(){
 
     // 페이지 최초 로딩
@@ -32,7 +26,11 @@ Frame.pageLoading = function () {
     console.log("Frame.pageLoading");
 
     // 비디오 세팅
-    Frame.videoLoading(videoInfo.videoArUrl);
+    if( videoInfo.playType == 'accompaniment' ) {
+        Frame.videoLoading(videoInfo.videoArAccompanimentUrl1);
+    } else {
+        Frame.videoLoading(videoInfo.videoArUrl);
+    }
 
     // 절 및 구간 데이터 로딩
     Frame.sectionDataLoading(videoInfo.verseType);
@@ -67,6 +65,10 @@ Frame.playTypeSetting = function ( playType ) {
         case 'single': // Only AR
             $(".play-select .btn-play-ar").addClass("onShow");
             break;
+        case 'name_single': // Only AR, Verse Name
+            $(".play-select .btn-play-ar").addClass("onShow");
+            $(".verse-btn-area").remove();
+            break;
         case 'solo': // 단성부
             $(".play-select .btn-play-ar").addClass("onShow");
             $(".play-select .btn-play-mr").addClass("onShow");
@@ -76,12 +78,19 @@ Frame.playTypeSetting = function ( playType ) {
             $(".play-select .btn-play-mr").addClass("onShow");
             $(".play-select .btn-play-ar-first").addClass("onShow");
             $(".play-select .btn-play-ar-second").addClass("onShow");
+            $(".verse-btn-area").remove();
             break;
         case 'polyphony2': // 다성부
             $(".play-select .btn-play-ar").addClass("onShow");
             $(".play-select .btn-play-mr").addClass("onShow");
             $(".play-select .btn-play-ar-male").addClass("onShow");
             $(".play-select .btn-play-ar-female").addClass("onShow");
+            break;
+        case 'polyphony_multitude': // 다성부, 다절
+            $(".play-select .btn-play-ar").addClass("onShow");
+            $(".play-select .btn-play-mr").addClass("onShow");
+            $(".play-select .btn-play-ar-first").addClass("onShow");
+            $(".play-select .btn-play-ar-second").addClass("onShow");
             break;
         case 'multilingual': // 다국어
             $(".play-select .btn-play-ar").addClass("onShow");
@@ -113,6 +122,7 @@ Frame.playTypeSetting = function ( playType ) {
             break;
         case 'recorder': // 리코더1, 리코더2
             $(".play-select .btn-play-ar").addClass("onShow");
+            $(".play-select .btn-play-mr").addClass("onShow");
             $(".play-select .btn-play-ar-recorder1").addClass("onShow");
             $(".play-select .btn-play-ar-recorder2").addClass("onShow");
             break;   
@@ -122,6 +132,12 @@ Frame.playTypeSetting = function ( playType ) {
             $(".play-select2 .btn-play-ar-recorder2-2").addClass("onShow");
             $(".play-select2 .btn-play-ar-kalimba").addClass("onShow");
             $(".play-select2 .btn-play-ar-piano").addClass("onShow");
+            break;
+        case 'accompaniment': // 반주 유형1, 반주 유형2
+            $(".play-select .btn-play-ar-accompaniment1").addClass("onShow");
+            $(".play-select .btn-play-ar-accompaniment2").addClass("onShow");
+            $(".play-select .btn-play-ar-accompaniment1").removeClass("btn-secondary");
+            $(".play-select .btn-play-ar-accompaniment1").addClass("btn-primary");
             break;
     }
 
@@ -142,6 +158,10 @@ Frame.sectionDataLoading = function ( verseType ) {
         // 버튼 생성 이벤트
         Frame.verseBtnCreate();
 
+    } else if ( verseType == "name_single" ) {
+
+        // 버튼 생성 이벤트(이름)
+        Frame.sectionBtnNameCreate( "name_single" );
     }
 }
 
@@ -422,6 +442,40 @@ Frame.playMethodBtnEventRegister = function () {
 
     });
 
+    // 반주 유형1 듣기
+    $(document).on("click", ".btn-play-ar-accompaniment1", function () {
+
+        Frame.videoLoading( videoInfo.videoArAccompanimentUrl1 );
+
+        $(".btn-play").addClass("btn-secondary");
+        $(".btn-play").removeClass("btn-primary");
+        $(this).addClass("btn-primary");
+        $(this).removeClass("btn-secondary");
+    });
+
+    // 반주 유형2 듣기
+    $(document).on("click", ".btn-play-ar-accompaniment2", function () {
+
+        Frame.videoLoading( videoInfo.videoArAccompanimentUrl2 );
+
+        $(".btn-play").addClass("btn-secondary");
+        $(".btn-play").removeClass("btn-primary");
+        $(this).addClass("btn-primary");
+        $(this).removeClass("btn-secondary");
+    });
+
+    // // 중중모리 듣기
+    // $(document).on("click", ".btn-play-ar-rythm1", function () {
+
+    //     Frame.videoLoading( videoInfo.videoArRythmUrl1 );
+
+    //     $(".btn-play").addClass("btn-secondary");
+    //     $(".btn-play").removeClass("btn-primary");
+    //     $(this).addClass("btn-primary");
+    //     $(this).removeClass("btn-secondary");
+
+    // });
+
 }
 
 // 절 버튼 생성
@@ -470,12 +524,12 @@ Frame.sectionBtnCreate = function ( type, verse ) {
 // 어느 절의 구간이 몇개 있는지 확인
 
     // 단일 절일 때
-    if( type == 'single') {
+    if( type == 'single' ) {
         sectionCnt = sectionTime.length;
     // 여러 절일 때
     } else if ( type == 'multitude') {
         sectionCnt = sectionTime[verse].length;
-    }
+    } 
 
     let sectionBtnArea = $("#section-btn-area");
     let htmlText = '';
@@ -501,7 +555,7 @@ Frame.sectionBtnEventRegister = function ( type, verse ) {
 
     for (let i = 0; i < sectionCnt; i++) {
         $(document).on("click", `#section-btn-area button[name='section${i+1}']`, function () {
-            if (type == 'single') { // 단일 절일 때
+            if (type == 'single' || type == 'name_single') { // 단일 절일 때
                 $("#vd_score").get(0).currentTime = sectionTime[i];
             } else if (type == 'multitude') { // 다중 절일 때
                 $("#vd_score").get(0).currentTime = sectionTime[verse][i];
@@ -514,6 +568,26 @@ Frame.sectionBtnEventRegister = function ( type, verse ) {
             $(this).removeClass("btn-secondary");
         });
     }
+}
+
+// 구간 버튼 생성 (네이밍)
+Frame.sectionBtnNameCreate = function ( type, verse ) {
+
+    sectionCnt = sectionTime.length;
+
+    let sectionBtnArea = $("#section-btn-area");
+    let htmlText = '';
+
+    sectionBtnArea.empty();
+    for (let i = 0; i < sectionCnt; i++) {
+        htmlText += `<button name="section${i+1}" class="btn btn-secondary section-btn">${videoInfo.sectionName[i]}</button>\n`
+    }
+
+    sectionBtnArea.append(htmlText);
+
+    // 구간 버튼 이벤트 등록
+    Frame.sectionBtnEventRegister(type, verse);
+
 }
 
 // 카운트 다운 효과 개발 예정
